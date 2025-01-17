@@ -9,16 +9,20 @@ namespace KantorUI
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        private Form1 _form1;  // Referencja do Form1
+
+        // Przekazanie instancji Form1 do Form3 w konstruktorze
+        public Form3(Form1 form1)
         {
             InitializeComponent();
+            _form1 = form1;
             textBox2.PasswordChar = '*';
         }
+
         private void Login(string login, string haslo)
         {
             try
             {
-                // Konstrukcja pełnej ścieżki do pliku JSON
                 string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
                 string filePath = Path.Combine(projectDirectory, "KantorLibrary", "Data", "klienci.json");
 
@@ -28,18 +32,23 @@ namespace KantorUI
                     string jsonContent = File.ReadAllText(filePath);
                     List<Klient> klienci = JsonSerializer.Deserialize<List<Klient>>(jsonContent) ?? new List<Klient>();
 
-                    // Sprawdzanie zgodności loginu i hasła
+                    // Wyszukiwanie klienta
                     var klient = klienci.Find(k => k.Login == login && k.Haslo == haslo);
                     if (klient != null)
                     {
-                        // Logowanie udane, otwarcie Form4 i przekazanie idKlienta
-                        Form4 form4 = new Form4(klient.Id);  // Przekazanie idKlienta
-                        form4.Show();
-                        this.Hide();  // Ukrycie bieżącego formularza
+                        // Logowanie udane, otwarcie Form1 i Form4
+                        _form1.Hide();  // Ukrycie Form1 (użytkownik niezalogowany)
+
+                        Form1 form1 = new Form1(klient.Typ);  // Tworzenie nowego Form1 z odpowiednim typem użytkownika
+                        form1.Show();  // Pokazywanie nowej wersji Form1
+
+                        Form4 form4 = new Form4(klient.Id);  // Tworzenie Form4 z Id klienta
+                        form4.Show();  // Pokazywanie Form4
+
+                        this.Hide();  // Ukrycie Form3
                     }
                     else
                     {
-                        // Logowanie nieudane
                         MessageBox.Show("Niepoprawne dane logowania. Spróbuj ponownie.");
                     }
                 }
@@ -60,11 +69,11 @@ namespace KantorUI
             string haslo = textBox2.Text;
             Login(login, haslo);
         }
+
         private void resetButton_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
             textBox2.Clear();
         }
-
     }
 }

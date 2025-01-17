@@ -11,7 +11,7 @@ namespace KantorUI
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1('U')); // Przekazanie 'U' jako userType dla niezalogowanego u¿ytkownika
+            Application.Run(new Form1('U'));
         }
     }
 }

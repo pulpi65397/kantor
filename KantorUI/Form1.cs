@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Text.Json;
@@ -12,7 +13,7 @@ namespace KantorUI
     {
         private char userType;
 
-        public Form1(char userType)
+        public Form1(char userType)  // Poprawiony konstruktor
         {
             InitializeComponent();
             this.userType = userType;
@@ -86,16 +87,23 @@ namespace KantorUI
 
         private void SetupUI()
         {
-            if (userType == 'U')
+            if (userType == 'U')  // U¿ytkownik niezalogowany
             {
                 // Poka¿ przyciski logowania i rejestracji
                 loginButton.Visible = true;
                 registerButton.Visible = true;
                 logoutButton.Visible = false;
             }
-            else
+            else if (userType == 'K')  // U¿ytkownik zalogowany bez uprawnieñ administratora
             {
-                // Poka¿ przycisk wylogowania, ukryj logowanie i rejestracjê
+                // Poka¿ tylko przycisk wylogowania
+                loginButton.Visible = false;
+                registerButton.Visible = false;
+                logoutButton.Visible = true;
+            }
+            else if (userType == 'A')  // Administrator
+            {
+                // Poka¿ tylko przycisk wylogowania oraz rozszerzon¹ funkcjonalnoœæ
                 loginButton.Visible = false;
                 registerButton.Visible = false;
                 logoutButton.Visible = true;
@@ -119,9 +127,52 @@ namespace KantorUI
         {
             if (sender is Button editButton && editButton.Tag is Kurs kurs)
             {
-                MessageBox.Show($"Edytuj kurs: {kurs.Waluta}");
-                // Otwieranie okna edycji kursów
+                // Otwieranie okna edycji kursów dla administratora
+                ShowEditForm(kurs);
             }
+        }
+
+        private void ShowEditForm(Kurs kurs)
+        {
+            // Przyk³adowe okno edycji kursów
+            Form editForm = new Form
+            {
+                Text = $"Edycja kursu: {kurs.Waluta}",
+                Size = new Size(300, 200)
+            };
+
+            TextBox buyCourseTextBox = new TextBox
+            {
+                Text = kurs.KursK.ToString("0.####", CultureInfo.InvariantCulture),
+                Location = new Point(10, 10),
+                Width = 100
+            };
+
+            TextBox sellCourseTextBox = new TextBox
+            {
+                Text = kurs.KursS.ToString("0.####", CultureInfo.InvariantCulture),
+                Location = new Point(10, 40),
+                Width = 100
+            };
+
+            Button saveButton = new Button
+            {
+                Text = "Zapisz",
+                Location = new Point(10, 70)
+            };
+            saveButton.Click += (sender, args) =>
+            {
+                // Tutaj mo¿esz zapisaæ zmienione dane kursu
+                kurs.KursK = decimal.Parse(buyCourseTextBox.Text, CultureInfo.InvariantCulture);
+                kurs.KursS = decimal.Parse(sellCourseTextBox.Text, CultureInfo.InvariantCulture);
+                MessageBox.Show($"Zaktualizowano kursy dla: {kurs.Waluta}");
+                editForm.Close();
+            };
+
+            editForm.Controls.Add(buyCourseTextBox);
+            editForm.Controls.Add(sellCourseTextBox);
+            editForm.Controls.Add(saveButton);
+            editForm.ShowDialog();
         }
 
         private void registerButton_Click(object sender, EventArgs e)
@@ -132,16 +183,20 @@ namespace KantorUI
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            Form3 form3 = new Form3(this);
             form3.Show();
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
+            if (Application.OpenForms["Form4"] != null)
+            {
+                Application.OpenForms["Form4"].Close();  // Zamykamy Form4
+            }
             // Implementacja wylogowania i powrotu do trybu niezalogowanego
             MessageBox.Show("Wylogowano");
-            this.userType = 'U';
-            SetupUI();
+            this.userType = 'U';  // Zmiana typu u¿ytkownika na niezalogowanego
+            SetupUI();  // Zaktualizowanie interfejsu
             // Opcjonalnie: Odœwie¿ dane bez funkcji administracyjnych
         }
     }
