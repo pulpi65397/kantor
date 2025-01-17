@@ -502,5 +502,275 @@
     "Grafika": null,
     "Kwota": 0.00,
     "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 7,
+    "Klient": null,
+    "Waluta": "PLN",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 7,
+    "Klient": null,
+    "Waluta": "USD",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 7,
+    "Klient": null,
+    "Waluta": "EUR",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 7,
+    "Klient": null,
+    "Waluta": "GBP",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 7,
+    "Klient": null,
+    "Waluta": "CHF",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 7,
+    "Klient": null,
+    "Waluta": "BTC",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 8,
+    "Klient": null,
+    "Waluta": "PLN",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 8,
+    "Klient": null,
+    "Waluta": "USD",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 8,
+    "Klient": null,
+    "Waluta": "EUR",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 8,
+    "Klient": null,
+    "Waluta": "GBP",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 8,
+    "Klient": null,
+    "Waluta": "CHF",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 8,
+    "Klient": null,
+    "Waluta": "BTC",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 9,
+    "Klient": null,
+    "Waluta": "PLN",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 9,
+    "Klient": null,
+    "Waluta": "USD",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 9,
+    "Klient": null,
+    "Waluta": "EUR",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 9,
+    "Klient": null,
+    "Waluta": "GBP",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 9,
+    "Klient": null,
+    "Waluta": "CHF",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 9,
+    "Klient": null,
+    "Waluta": "BTC",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 10,
+    "Klient": null,
+    "Waluta": "PLN",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 10,
+    "Klient": null,
+    "Waluta": "USD",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 10,
+    "Klient": null,
+    "Waluta": "EUR",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 10,
+    "Klient": null,
+    "Waluta": "GBP",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 10,
+    "Klient": null,
+    "Waluta": "CHF",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 10,
+    "Klient": null,
+    "Waluta": "BTC",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 11,
+    "Klient": null,
+    "Waluta": "PLN",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 11,
+    "Klient": null,
+    "Waluta": "USD",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 11,
+    "Klient": null,
+    "Waluta": "EUR",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 11,
+    "Klient": null,
+    "Waluta": "GBP",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 11,
+    "Klient": null,
+    "Waluta": "CHF",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 11,
+    "Klient": null,
+    "Waluta": "BTC",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
   }
 ]

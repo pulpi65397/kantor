@@ -123,6 +123,15 @@ namespace KantorUI
                 CreateCurrencyAccounts(newClientId);
 
                 MessageBox.Show("Rejestracja zakończona pomyślnie!");
+                this.Hide();  // Ukrywamy bieżący formularz (Form2)
+                if (Application.OpenForms["Form1"] != null)
+                {
+                    Application.OpenForms["Form1"].Hide();  // Zamykamy Form4
+                }
+                Form1 form1 = new Form1('K');
+                form1.Show();
+                Form4 form4 = new Form4(newClientId);  // Tworzymy nową instancję Form4
+                form4.Show();  // Wyświetlamy Form4
             }
             catch (Exception ex)
             {
