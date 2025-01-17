@@ -136,7 +136,7 @@ namespace KantorUI
             }
         }
 
-        private async void ShowEditForm(Kurs kurs)
+        private void ShowEditForm(Kurs kurs)
         {
             // Przyk³adowe okno edycji kursów
             Form editForm = new Form
@@ -165,7 +165,7 @@ namespace KantorUI
                 Location = new Point(10, 70)
             };
 
-            saveButton.Click += async (sender, args) =>
+            saveButton.Click += (sender, args) =>
             {
                 try
                 {
@@ -191,16 +191,8 @@ namespace KantorUI
 
                         MessageBox.Show($"Zaktualizowano kursy dla: {kurs.Waluta}");
 
-                        // Odœwie¿enie ListView w g³ównym oknie
-                        var form1 = Application.OpenForms.OfType<Form1>().FirstOrDefault();
-                        if (form1 != null)
-                        {
-                            // U¿ywamy Invoke, by zapewniæ bezpieczeñstwo w¹tkowe
-                            form1.Invoke(new Action(() =>
-                            {
-                                form1.UpdateKursyListView(kursy); // Odœwie¿enie ListView
-                            }));
-                        }
+                        // Odœwie¿enie ListView w g³ównym oknie - Natychmiastowe odœwie¿enie
+                        UpdateKursyListView(kursy); // Odœwie¿enie ListView na g³ównym w¹tku
                     }
                     else
                     {
@@ -221,7 +213,6 @@ namespace KantorUI
             editForm.ShowDialog();
         }
 
-
         public void UpdateKursyListView(List<Kurs> kursy)
         {
             listView1.Items.Clear();
@@ -229,13 +220,36 @@ namespace KantorUI
             {
                 var item = new ListViewItem(new[]
                 {
-                    kurs.Waluta,
-                    kurs.KursK.ToString("0.####", CultureInfo.InvariantCulture),
-                    kurs.KursS.ToString("0.####", CultureInfo.InvariantCulture)
-                });
+            kurs.Waluta,
+            kurs.KursK.ToString("0.####", CultureInfo.InvariantCulture),
+            kurs.KursS.ToString("0.####", CultureInfo.InvariantCulture)
+        });
+
+                if (!string.IsNullOrEmpty(kurs.Grafika))
+                {
+                    string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+                    string imagePath = Path.Combine(projectDirectory, "KantorLibrary", "Images", kurs.Grafika);
+                    if (File.Exists(imagePath))
+                    {
+                        try
+                        {
+                            Image img = Image.FromFile(imagePath);
+                            int imageIndex = listView1.SmallImageList.Images.Count;
+                            listView1.SmallImageList.Images.Add(img);
+                            item.ImageIndex = imageIndex;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"B³¹d podczas ³adowania obrazu: {ex.Message}");
+                        }
+                    }
+                }
+
                 listView1.Items.Add(item); // Dodawanie nowych elementów do ListView
             }
         }
+
+
 
         private void registerButton_Click(object sender, EventArgs e)
         {
