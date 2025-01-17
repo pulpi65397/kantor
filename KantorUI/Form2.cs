@@ -126,7 +126,7 @@ namespace KantorUI
                 this.Hide();  // Ukrywamy bieżący formularz (Form2)
                 if (Application.OpenForms["Form1"] != null)
                 {
-                    Application.OpenForms["Form1"].Hide();  // Zamykamy Form4
+                    Application.OpenForms["Form1"].Hide();
                 }
                 Form1 form1 = new Form1('K');
                 form1.Show();
