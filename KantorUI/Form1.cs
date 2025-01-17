@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
 using System.Windows.Forms;
 using KantorLibrary.Models;
@@ -107,6 +108,9 @@ namespace KantorUI
                 loginButton.Visible = false;
                 registerButton.Visible = false;
                 logoutButton.Visible = true;
+                listView1.Size = new Size(375, 250);
+                this.Size = new Size(525, 350);
+                logoutButton.Location = new Point(400, 67);
             }
         }
 
@@ -132,7 +136,7 @@ namespace KantorUI
             }
         }
 
-        private void ShowEditForm(Kurs kurs)
+        private async void ShowEditForm(Kurs kurs)
         {
             // Przyk³adowe okno edycji kursów
             Form editForm = new Form
@@ -160,19 +164,77 @@ namespace KantorUI
                 Text = "Zapisz",
                 Location = new Point(10, 70)
             };
-            saveButton.Click += (sender, args) =>
+
+            saveButton.Click += async (sender, args) =>
             {
-                // Tutaj mo¿esz zapisaæ zmienione dane kursu
-                kurs.KursK = decimal.Parse(buyCourseTextBox.Text, CultureInfo.InvariantCulture);
-                kurs.KursS = decimal.Parse(sellCourseTextBox.Text, CultureInfo.InvariantCulture);
-                MessageBox.Show($"Zaktualizowano kursy dla: {kurs.Waluta}");
-                editForm.Close();
+                try
+                {
+                    // Zmiana wartoœci kursów
+                    kurs.KursK = decimal.Parse(buyCourseTextBox.Text, CultureInfo.InvariantCulture);
+                    kurs.KursS = decimal.Parse(sellCourseTextBox.Text, CultureInfo.InvariantCulture);
+
+                    // Deserializacja istniej¹cej kolekcji kursów z pliku JSON
+                    string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+                    string jsonFilePath = Path.Combine(projectDirectory, "KantorLibrary", "Data", "kursy.json");
+                    string jsonContent = File.ReadAllText(jsonFilePath);
+                    var kursy = JsonSerializer.Deserialize<List<Kurs>>(jsonContent);
+
+                    var kursDoAktualizacji = kursy.FirstOrDefault(k => k.Waluta == kurs.Waluta);
+                    if (kursDoAktualizacji != null)
+                    {
+                        kursDoAktualizacji.KursK = kurs.KursK;
+                        kursDoAktualizacji.KursS = kurs.KursS;
+
+                        // Serializacja kolekcji z powrotem do pliku JSON
+                        jsonContent = JsonSerializer.Serialize(kursy, new JsonSerializerOptions { WriteIndented = true });
+                        File.WriteAllText(jsonFilePath, jsonContent);
+
+                        MessageBox.Show($"Zaktualizowano kursy dla: {kurs.Waluta}");
+
+                        // Odœwie¿enie ListView w g³ównym oknie
+                        var form1 = Application.OpenForms.OfType<Form1>().FirstOrDefault();
+                        if (form1 != null)
+                        {
+                            // U¿ywamy Invoke, by zapewniæ bezpieczeñstwo w¹tkowe
+                            form1.Invoke(new Action(() =>
+                            {
+                                form1.UpdateKursyListView(kursy); // Odœwie¿enie ListView
+                            }));
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nie znaleziono kursu do aktualizacji.");
+                    }
+
+                    editForm.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Wyst¹pi³ b³¹d: {ex.Message}");
+                }
             };
 
             editForm.Controls.Add(buyCourseTextBox);
             editForm.Controls.Add(sellCourseTextBox);
             editForm.Controls.Add(saveButton);
             editForm.ShowDialog();
+        }
+
+
+        public void UpdateKursyListView(List<Kurs> kursy)
+        {
+            listView1.Items.Clear();
+            foreach (var kurs in kursy)
+            {
+                var item = new ListViewItem(new[]
+                {
+                    kurs.Waluta,
+                    kurs.KursK.ToString("0.####", CultureInfo.InvariantCulture),
+                    kurs.KursS.ToString("0.####", CultureInfo.InvariantCulture)
+                });
+                listView1.Items.Add(item); // Dodawanie nowych elementów do ListView
+            }
         }
 
         private void registerButton_Click(object sender, EventArgs e)
