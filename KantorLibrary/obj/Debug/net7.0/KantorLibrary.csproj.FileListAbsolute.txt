@@ -1,0 +1,12 @@
+E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorLibrary\bin\Debug\net7.0\KantorLibrary.deps.json
+E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorLibrary\bin\Debug\net7.0\KantorLibrary.dll
+E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorLibrary\bin\Debug\net7.0\KantorLibrary.pdb
+E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorLibrary\obj\Debug\net7.0\KantorLibrary.GeneratedMSBuildEditorConfig.editorconfig
+E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorLibrary\obj\Debug\net7.0\KantorLibrary.AssemblyInfoInputs.cache
+E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorLibrary\obj\Debug\net7.0\KantorLibrary.AssemblyInfo.cs
+E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorLibrary\obj\Debug\net7.0\KantorLibrary.csproj.CoreCompileInputs.cache
+E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorLibrary\obj\Debug\net7.0\KantorLibrary.dll
+E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorLibrary\obj\Debug\net7.0\refint\KantorLibrary.dll
+E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorLibrary\obj\Debug\net7.0\KantorLibrary.pdb
+E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorLibrary\obj\Debug\net7.0\ref\KantorLibrary.dll
+E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorLibrary\obj\Debug\net7.0\KantorLibrary.csproj.AssemblyReference.cache

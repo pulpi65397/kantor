@@ -1,0 +1,506 @@
+[
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 6,
+    "Klient": null,
+    "Waluta": "PLN",
+    "Grafika": null,
+    "Kwota": 10000.00,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 6,
+    "Klient": null,
+    "Waluta": "USD",
+    "Grafika": null,
+    "Kwota": 1000.00,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 6,
+    "Klient": null,
+    "Waluta": "EUR",
+    "Grafika": null,
+    "Kwota": 0.00,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 6,
+    "Klient": null,
+    "Waluta": "GBP",
+    "Grafika": null,
+    "Kwota": 0.00,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 6,
+    "Klient": null,
+    "Waluta": "CHF",
+    "Grafika": null,
+    "Kwota": 0.00,
+    "Data": "0001-01-01T00:00:00"
+  }
+]

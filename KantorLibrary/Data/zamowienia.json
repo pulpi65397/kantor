@@ -1,0 +1,18 @@
+[
+  {
+    "id_zamowienia": 51,
+    "data_zamowienia": "2025-01-17T14:51:34.6165072+01:00",
+    "id_klienta": 6,
+    "Klient": null,
+    "ilosc": 1,
+    "wartosc": 4.2481,
+    "id_lokalizacji": 0,
+    "Lokalizacja": null,
+    "id_kursu": 0,
+    "Kurs": null,
+    "kurs": 0,
+    "strona": "K",
+    "id_adresu": 0,
+    "Adres": null
+  }
+]
