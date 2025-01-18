@@ -1,132 +1,145 @@
 [
-      {
-        "id_adresu": "1",
-        "ulica": "Ksi�dza Knosa�y",
-        "numer_domu": "120",
-        "numer_mieszkania": null,
-        "kod_pocztowy": "41-922",
-        "miasto": "Radzionk�w",
-        "typ_adresu": "Adres zamieszkania",
-        "id_klienta": 6
-      },
-      {
-        "id_adresu": "2",
-        "ulica": "ul. Mazowiecka",
-        "numer_domu": "128",
-        "numer_mieszkania": null,
-        "kod_pocztowy": "92-215",
-        "miasto": "��d�",
-        "typ_adresu": "Adres zamieszkania",
-        "id_klienta": 7
-      },
-      {
-        "id_adresu": "3",
-        "ulica": "Czerwonego Krzy�a",
-        "numer_domu": "115",
-        "numer_mieszkania": null,
-        "kod_pocztowy": "85-333",
-        "miasto": "Bydgoszcz",
-        "typ_adresu": "Adres zamieszkania",
-        "id_klienta": 5
-      },
-      {
-        "id_adresu": "4",
-        "ulica": "Nadwi�la�ska",
-        "numer_domu": "122",
-        "numer_mieszkania": null,
-        "kod_pocztowy": "30-527",
-        "miasto": "Krak�w",
-        "typ_adresu": "Adres zamieszkania",
-        "id_klienta": 8
-      },
-      {
-        "id_adresu": "5",
-        "ulica": "Jasienicy Paw�a",
-        "numer_domu": "132",
-        "numer_mieszkania": null,
-        "kod_pocztowy": "70-492",
-        "miasto": "Szczecin",
-        "typ_adresu": "Adres zamieszkania",
-        "id_klienta": 17
-      },
-      {
-        "id_adresu": "6",
-        "ulica": "Syrokomli W�adys�awa",
-        "numer_domu": "150",
-        "numer_mieszkania": null,
-        "kod_pocztowy": "51-141",
-        "miasto": "Wroc�aw",
-        "typ_adresu": "Adres zamieszkania",
-        "id_klienta": 4
-      },
-      {
-        "id_adresu": "7",
-        "ulica": "Franklee Lane",
-        "numer_domu": "2775",
-        "numer_mieszkania": null,
-        "kod_pocztowy": "19108",
-        "miasto": "Philadelphia",
-        "typ_adresu": "Adres zamieszkania",
-        "id_klienta": 2
-      },
-      {
-        "id_adresu": "8",
-        "ulica": "Washburn Street",
-        "numer_domu": "785",
-        "numer_mieszkania": null,
-        "kod_pocztowy": "70814",
-        "miasto": "Baton Rouge",
-        "typ_adresu": "Adres zamieszkania",
-        "id_klienta": 18
-      },
-      {
-        "id_adresu": "9",
-        "ulica": "Euclid Avenue",
-        "numer_domu": "1055",
-        "numer_mieszkania": null,
-        "kod_pocztowy": "90017",
-        "miasto": "Los Angeles",
-        "typ_adresu": "Adres korespondencyjny",
-        "id_klienta": 18
-      },
-      {
-        "id_adresu": "10",
-        "ulica": "Cheshire Road",
-        "numer_domu": "2878",
-        "numer_mieszkania": null,
-        "kod_pocztowy": "06484",
-        "miasto": "Huntington",
-        "typ_adresu": "Adres zamieszkania",
-        "id_klienta": 19
-      },
-      {
-        "id_adresu": "11",
-        "ulica": "Post Farm Road",
-        "numer_domu": "1909",
-        "numer_mieszkania": null,
-        "kod_pocztowy": "30071",
-        "miasto": "Norcross",
-        "typ_adresu": "Adres zamieszkania",
-        "id_klienta": 20
-      },
-      {
-        "id_adresu": "12",
-        "ulica": "Jenna Lane",
-        "numer_domu": "962",
-        "numer_mieszkania": null,
-        "kod_pocztowy": "45241",
-        "miasto": "Cincinnati",
-        "typ_adresu": "Adres zamieszkania",
-        "id_klienta": 21
-      },
-      {
-        "id_adresu": "15",
-        "ulica": "a",
-        "numer_domu": "1",
-        "numer_mieszkania": null,
-        "kod_pocztowy": "00-000",
-        "miasto": "b",
-        "typ_adresu": "c",
-        "id_klienta": 1
-      }
+  {
+    "Id": 1,
+    "Ulica": "Ksi�dza Knosa�y",
+    "NrDomu": "120",
+    "NrMieszkania": null,
+    "KodPocztowy": "41-922",
+    "Miasto": "Radzionk�w",
+    "TypAdresu": "Adres zamieszkania",
+    "KlientId": 6,
+    "Klient": null
+  },
+  {
+    "Id": 2,
+    "Ulica": "ul. Mazowiecka",
+    "NrDomu": "128",
+    "NrMieszkania": null,
+    "KodPocztowy": "92-215",
+    "Miasto": "��d�",
+    "TypAdresu": "Adres zamieszkania",
+    "KlientId": 7,
+    "Klient": null
+  },
+  {
+    "Id": 3,
+    "Ulica": "Czerwonego Krzy�a",
+    "NrDomu": "115",
+    "NrMieszkania": null,
+    "KodPocztowy": "85-333",
+    "Miasto": "Bydgoszcz",
+    "TypAdresu": "Adres zamieszkania",
+    "KlientId": 5,
+    "Klient": null
+  },
+  {
+    "Id": 4,
+    "Ulica": "Nadwi�la�ska",
+    "NrDomu": "122",
+    "NrMieszkania": null,
+    "KodPocztowy": "30-527",
+    "Miasto": "Krak�w",
+    "TypAdresu": "Adres zamieszkania",
+    "KlientId": 8,
+    "Klient": null
+  },
+  {
+    "Id": 5,
+    "Ulica": "Jasienicy Paw�a",
+    "NrDomu": "132",
+    "NrMieszkania": null,
+    "KodPocztowy": "70-492",
+    "Miasto": "Szczecin",
+    "TypAdresu": "Adres zamieszkania",
+    "KlientId": 17,
+    "Klient": null
+  },
+  {
+    "Id": 6,
+    "Ulica": "Syrokomli W�adys�awa",
+    "NrDomu": "150",
+    "NrMieszkania": null,
+    "KodPocztowy": "51-141",
+    "Miasto": "Wroc�aw",
+    "TypAdresu": "Adres zamieszkania",
+    "KlientId": 4,
+    "Klient": null
+  },
+  {
+    "Id": 7,
+    "Ulica": "Franklee Lane",
+    "NrDomu": "2775",
+    "NrMieszkania": null,
+    "KodPocztowy": "19108",
+    "Miasto": "Philadelphia",
+    "TypAdresu": "Adres zamieszkania",
+    "KlientId": 2,
+    "Klient": null
+  },
+  {
+    "Id": 8,
+    "Ulica": "Washburn Street",
+    "NrDomu": "785",
+    "NrMieszkania": null,
+    "KodPocztowy": "70814",
+    "Miasto": "Baton Rouge",
+    "TypAdresu": "Adres zamieszkania",
+    "KlientId": 18,
+    "Klient": null
+  },
+  {
+    "Id": 9,
+    "Ulica": "Euclid Avenue",
+    "NrDomu": "1055",
+    "NrMieszkania": null,
+    "KodPocztowy": "90017",
+    "Miasto": "Los Angeles",
+    "TypAdresu": "Adres korespondencyjny",
+    "KlientId": 18,
+    "Klient": null
+  },
+  {
+    "Id": 10,
+    "Ulica": "Cheshire Road",
+    "NrDomu": "2878",
+    "NrMieszkania": null,
+    "KodPocztowy": "06484",
+    "Miasto": "Huntington",
+    "TypAdresu": "Adres zamieszkania",
+    "KlientId": 19,
+    "Klient": null
+  },
+  {
+    "Id": 11,
+    "Ulica": "Post Farm Road",
+    "NrDomu": "1909",
+    "NrMieszkania": null,
+    "KodPocztowy": "30071",
+    "Miasto": "Norcross",
+    "TypAdresu": "Adres zamieszkania",
+    "KlientId": 20,
+    "Klient": null
+  },
+  {
+    "Id": 12,
+    "Ulica": "Jenna Lane",
+    "NrDomu": "962",
+    "NrMieszkania": null,
+    "KodPocztowy": "45241",
+    "Miasto": "Cincinnati",
+    "TypAdresu": "Adres zamieszkania",
+    "KlientId": 21,
+    "Klient": null
+  },
+  {
+    "Id": 15,
+    "Ulica": "a",
+    "NrDomu": "1",
+    "NrMieszkania": null,
+    "KodPocztowy": "00-000",
+    "Miasto": "b",
+    "TypAdresu": "c",
+    "KlientId": 1,
+    "Klient": null
+  }
     ]

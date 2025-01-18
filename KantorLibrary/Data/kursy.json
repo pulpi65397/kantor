@@ -1,34 +1,34 @@
 [
   {
-    "Id": 0,
+    "Id": 1,
     "grafika": "usd.png",
     "waluta": "USD",
     "kursK": 4.4381,
     "kursS": 4.1639
   },
   {
-    "Id": 0,
+    "Id": 2,
     "grafika": "eur.png",
     "waluta": "EUR",
     "kursK": 4.5858,
     "kursS": 4.4950
   },
   {
-    "Id": 0,
+    "Id": 3,
     "grafika": "gbp.png",
     "waluta": "GBP",
     "kursK": 5.2844,
     "kursS": 5.1798
   },
   {
-    "Id": 0,
+    "Id": 4,
     "grafika": "chf.png",
     "waluta": "CHF",
     "kursK": 4.7119,
     "kursS": 4.6185
   },
   {
-    "Id": 0,
+    "Id": 5,
     "grafika": "btc.png",
     "waluta": "BTC",
     "kursK": 114702.3800,

@@ -9,28 +9,28 @@ namespace KantorLibrary.Models
 {
     public class Zamowienie
     {
-        [JsonPropertyName("id_zamowienia")]
+       // [JsonPropertyName("id_zamowienia")]
         public int Id { get; set; }
-        [JsonPropertyName("data_zamowienia")]
+      //  [JsonPropertyName("data_zamowienia")]
         public DateTime Data { get; set; } //data zamówienia
-        [JsonPropertyName("id_klienta")]
+      //  [JsonPropertyName("id_klienta")]
         public int KlientId { get; set; }
         public Klient Klient { get; set; }
-        [JsonPropertyName("ilosc")]
+      //  [JsonPropertyName("ilosc")]
         public int Ilosc { get; set; }
-        [JsonPropertyName("wartosc")]
+      //  [JsonPropertyName("wartosc")]
         public decimal Wartosc { get; set; }
-        [JsonPropertyName("id_lokalizacji")]
+      //  [JsonPropertyName("id_lokalizacji")]
         public int LokalizacjaId { get; set; }
         public Lokalizacja Lokalizacja { get; set; }
-        [JsonPropertyName("id_kursu")]
+      //  [JsonPropertyName("id_kursu")]
         public int KursId { get; set; }
         public Kurs Kurs { get; set; }
-        [JsonPropertyName("kurs")]
+     //   [JsonPropertyName("kurs")]
         public decimal CenaKursu { get; set; }
-        [JsonPropertyName("strona")]
+     //   [JsonPropertyName("strona")]
         public char Strona { get; set; } //czy kupno czy sprzedaż
-        [JsonPropertyName("id_adresu")]
+     //   [JsonPropertyName("id_adresu")]
         public int AdresId { get; set; }
         public Adres Adres { get; set; }
 

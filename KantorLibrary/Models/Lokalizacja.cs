@@ -10,9 +10,7 @@ namespace KantorLibrary.Models
     public class Lokalizacja
     {
         public int Id { get; set; }
-        [JsonPropertyName("miasto")]
         public string Miasto { get; set; }
-        [JsonPropertyName("kod_kraju")]
         public string KodKraju { get; set; } //np. POL, USA
         public decimal IloscUSD { get; set; }
         public decimal IloscEUR { get; set; }
