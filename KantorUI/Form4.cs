@@ -237,7 +237,7 @@ namespace KantorUI
                 Text = "-",
                 Tag = konto,
                 Size = new Size(20, 20),
-                Location = new Point(item.Bounds.Right+20, item.Bounds.Top)
+                Location = new Point(item.Bounds.Right + 20, item.Bounds.Top)
             };
             subFundsButton.Click += SubFundsButton_Click;
             listView1.Controls.Add(subFundsButton);
@@ -289,29 +289,35 @@ namespace KantorUI
             {
                 try
                 {
-                    // Pobieranie kwoty do dodania
-                    if (!decimal.TryParse(amountTextBox.Text, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out decimal amountToAdd))
+                    // Zmiana wartości kursów
+                    konto.Kwota = decimal.Parse(amountTextBox.Text, CultureInfo.InvariantCulture);
+
+                    // Deserializacja istniejącej kolekcji kursów z pliku JSON
+                    string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+                    string jsonFilePath = Path.Combine(projectDirectory, "KantorLibrary", "Data", "konta.json");
+                    string jsonContent = File.ReadAllText(jsonFilePath);
+                    var konta = JsonSerializer.Deserialize<List<Konto>>(jsonContent);
+
+
+
+                    var kontoDoAktualizacji = konta.FirstOrDefault(k => k.Waluta == konto.Waluta);
+                    if (kontoDoAktualizacji != null)
                     {
-                        MessageBox.Show("Wprowadź poprawną kwotę.");
-                        return;
-                    }
+                        kontoDoAktualizacji.Kwota += konto.Kwota;
 
-                    if (amountToAdd <= 0)
+                        // Serializacja kolekcji z powrotem do pliku JSON
+                        jsonContent = JsonSerializer.Serialize(konta, new JsonSerializerOptions { WriteIndented = true });
+                        File.WriteAllText(jsonFilePath, jsonContent);
+
+                        MessageBox.Show($"Zaktualizowano dla: {konto.Waluta}");
+
+                        // Odświeżenie ListView w głównym oknie - Natychmiastowe odświeżenie
+                        UpdateKontaListView(konta, KlientId); // Odświeżenie ListView na głównym wątku
+                    }
+                    else
                     {
-                        MessageBox.Show("Kwota musi być większa od zera.");
-                        return;
+                        MessageBox.Show("Nie znaleziono konta do aktualizacji.");
                     }
-
-                    // Aktualizacja środków na koncie
-                    konto.Kwota += amountToAdd;
-
-                    // Aktualizacja w pliku JSON
-                    UpdateAccountInJson(konto);
-
-                    MessageBox.Show($"Środki zostały dodane na konto: {konto.Waluta}");
-
-                    // Odświeżenie widoku
-                    RefreshListView();
 
                     addFundsForm.Close();
                 }
@@ -356,28 +362,35 @@ namespace KantorUI
             {
                 try
                 {
-                    if (!decimal.TryParse(amountTextBox.Text, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out decimal amountToSubstract))
+                    // Zmiana wartości kursów
+                    konto.Kwota = decimal.Parse(amountTextBox.Text, CultureInfo.InvariantCulture);
+
+                    // Deserializacja istniejącej kolekcji kursów z pliku JSON
+                    string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+                    string jsonFilePath = Path.Combine(projectDirectory, "KantorLibrary", "Data", "konta.json");
+                    string jsonContent = File.ReadAllText(jsonFilePath);
+                    var konta = JsonSerializer.Deserialize<List<Konto>>(jsonContent);
+
+
+
+                    var kontoDoAktualizacji = konta.FirstOrDefault(k => k.Waluta == konto.Waluta);
+                    if (kontoDoAktualizacji != null)
                     {
-                        MessageBox.Show("Wprowadź poprawną kwotę.");
-                        return;
-                    }
+                        kontoDoAktualizacji.Kwota -= konto.Kwota;
 
-                    if (amountToSubstract <= 0)
+                        // Serializacja kolekcji z powrotem do pliku JSON
+                        jsonContent = JsonSerializer.Serialize(konta, new JsonSerializerOptions { WriteIndented = true });
+                        File.WriteAllText(jsonFilePath, jsonContent);
+
+                        MessageBox.Show($"Zaktualizowano konto: {konto.Waluta}");
+
+                        // Odświeżenie ListView w głównym oknie - Natychmiastowe odświeżenie
+                        UpdateKontaListView(konta, KlientId); // Odświeżenie ListView na głównym wątku
+                    }
+                    else
                     {
-                        MessageBox.Show("Kwota musi być większa od zera.");
-                        return;
+                        MessageBox.Show("Nie znaleziono konta do aktualizacji.");
                     }
-
-                    // Aktualizacja środków na koncie
-                    konto.Kwota -= amountToSubstract;
-
-                    // Aktualizacja w pliku JSON
-                    UpdateAccountInJson(konto);
-
-                    MessageBox.Show($"Środki zostały wypłacone z konta: {konto.Waluta}");
-
-                    // Odświeżenie widoku
-                    RefreshListView();
 
                     subFundsForm.Close();
                 }
@@ -393,103 +406,21 @@ namespace KantorUI
             subFundsForm.ShowDialog();
         }
 
-        private void UpdateAccountInJson(Konto konto)
+        public void UpdateKontaListView(List<Konto> konta, int klientId)
         {
-            try
+            listView1.Items.Clear();
+            var kontaDlaKlienta = konta.Where(k => k.KlientId == klientId).ToList(); // Filtrujemy konta na podstawie id klienta
+
+            foreach (var konto in kontaDlaKlienta)
             {
-                string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
-                string jsonFilePath = Path.Combine(projectDirectory, "KantorLibrary", "Data", "konta.json");
-
-                if (!File.Exists(jsonFilePath))
+                var item = new ListViewItem(new[]
                 {
-                    MessageBox.Show("Plik z danymi kont nie istnieje.");
-                    return;
-                }
-
-                string jsonContent = File.ReadAllText(jsonFilePath);
-                var konta = JsonSerializer.Deserialize<List<Konto>>(jsonContent) ?? new List<Konto>();
-
-                var kontoDoAktualizacji = konta.FirstOrDefault(k => k.Id == konto.Id);
-                if (kontoDoAktualizacji != null)
-                {
-                    kontoDoAktualizacji.Kwota = konto.Kwota;
-
-                    jsonContent = JsonSerializer.Serialize(konta, new JsonSerializerOptions { WriteIndented = true });
-                    File.WriteAllText(jsonFilePath, jsonContent);
-                }
-                else
-                {
-                    MessageBox.Show("Nie znaleziono konta do aktualizacji.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Wystąpił błąd podczas aktualizacji pliku JSON: {ex.Message}");
+                    konto.Waluta,
+                    konto.Kwota.ToString("F2", CultureInfo.InvariantCulture),
+                });
+                listView1.Items.Add(item); // Dodawanie nowych elementów do ListView
             }
         }
-
-        private void RefreshListView()
-        {
-            try
-            {
-                string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
-                string jsonFilePath = Path.Combine(projectDirectory, "KantorLibrary", "Data", "konta.json");
-
-                if (!File.Exists(jsonFilePath))
-                {
-                    MessageBox.Show("Plik z danymi kont nie istnieje.");
-                    return;
-                }
-
-                string jsonContent = File.ReadAllText(jsonFilePath);
-                var konta = JsonSerializer.Deserialize<List<Konto>>(jsonContent) ?? new List<Konto>();
-
-                // Filtrowanie kont dla danego klienta
-                var kontaDlaKlienta = konta.Where(k => k.KlientId == KlientId).ToList();
-
-                listView1.Items.Clear();
-
-                if (kontaDlaKlienta.Count == 0)
-                {
-                    MessageBox.Show("Brak kont dla wskazanego klienta.");
-                    return;
-                }
-
-                listView1.Columns.Clear();
-                listView1.Columns.Add("Waluta");
-                listView1.Columns.Add("Kwota");
-
-                decimal sumaWPln = 0m;
-
-                foreach (var konto in kontaDlaKlienta)
-                {
-                    ListViewItem item = new ListViewItem
-                    {
-                        Text = konto.Waluta
-                    };
-
-                    decimal kwota = konto.Kwota;
-                    decimal kursDoPln = kursy.FirstOrDefault(k => k.Waluta == konto.Waluta)?.KursS ?? 0;
-                    decimal wartoscWPln = kwota * kursDoPln;
-
-                    sumaWPln += wartoscWPln;
-
-                    item.SubItems.Add(kwota >= 0
-                        ? kwota.ToString("F2", CultureInfo.InvariantCulture)
-                        : "Nieprawidłowe dane. Liczba jest ujemna");
-
-                    listView1.Items.Add(item);
-                    AddAddButton(item, konto);
-                    AddSubButton(item, konto);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Wystąpił błąd podczas odświeżania listy: {ex.Message}");
-            }
-        }
-
-
 
 
 
@@ -509,6 +440,19 @@ namespace KantorUI
             {
                 MessageBox.Show($"Błąd przy ładowaniu danych z {filePath}: {ex.Message}");
                 return default;
+            }
+        }
+
+        private void SaveToJson<T>(string filePath, T data)
+        {
+            try
+            {
+                string jsonContent = JsonSerializer.Serialize(data);
+                File.WriteAllText(filePath, jsonContent);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Błąd przy zapisywaniu danych do pliku: {ex.Message}");
             }
         }
 
@@ -636,7 +580,7 @@ namespace KantorUI
                 if (string.IsNullOrEmpty(waluta)) waluta = "USD";  // Przykład domyślnej waluty
                 if (string.IsNullOrEmpty(strona)) strona = "Kupno";  // Przykład domyślnej strony
 
-                
+
                 var filteredZamowienia = zamowienia
                     .Where(z => z.KursId == walutaObj.Id)
                     .Where(z => z.Strona == strona[0])

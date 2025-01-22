@@ -5,7 +5,7 @@
     "Klient": null,
     "Waluta": null,
     "Grafika": null,
-    "Kwota": 10000.00,
+    "Kwota": 0,
     "Data": "0001-01-01T00:00:00"
   },
   {
@@ -464,7 +464,7 @@
     "Klient": null,
     "Waluta": "PLN",
     "Grafika": null,
-    "Kwota": 10000.00,
+    "Kwota": 10001.00,
     "Data": "0001-01-01T00:00:00"
   },
   {
