@@ -66,7 +66,7 @@
             listView1.Anchor = AnchorStyles.Left;
             listView1.Location = new Point(4, 16);
             listView1.Name = "listView1";
-            listView1.Size = new Size(155, 143);
+            listView1.Size = new Size(175, 143);
             listView1.TabIndex = 26;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -249,7 +249,7 @@
             // 
             listView2.Location = new Point(6, 66);
             listView2.Name = "listView2";
-            listView2.Size = new Size(772, 141);
+            listView2.Size = new Size(972, 282);
             listView2.TabIndex = 3;
             listView2.UseCompatibleStateImageBehavior = false;
             // 
@@ -327,7 +327,7 @@
             groupBox3.Controls.Add(comboBox5);
             groupBox3.Location = new Point(8, 208);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(783, 221);
+            groupBox3.Size = new Size(1000, 375);
             groupBox3.TabIndex = 30;
             groupBox3.TabStop = false;
             groupBox3.Text = "Zamówienia klienta";
@@ -336,7 +336,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(798, 440);
+            ClientSize = new Size(1024, 600);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);

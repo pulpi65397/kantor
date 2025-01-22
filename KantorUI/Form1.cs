@@ -13,11 +13,16 @@ namespace KantorUI
     public partial class Form1 : Form
     {
         private char userType;
+        private Size defaultFormSize;
+        private Size defaultListViewSize;
+
 
         public Form1(char userType)  // Poprawiony konstruktor
         {
             InitializeComponent();
             this.userType = userType;
+            defaultFormSize = this.Size;
+            defaultListViewSize = listView1.Size;
             LoadData();
             SetupUI();
         }
@@ -269,11 +274,15 @@ namespace KantorUI
             {
                 Application.OpenForms["Form4"].Close();  // Zamykamy Form4
             }
-            // Implementacja wylogowania i powrotu do trybu niezalogowanego
+
             MessageBox.Show("Wylogowano");
-            this.userType = 'U';  // Zmiana typu u¿ytkownika na niezalogowanego
-            SetupUI();  // Zaktualizowanie interfejsu
-            // Opcjonalnie: Odœwie¿ dane bez funkcji administracyjnych
+            this.userType = 'U'; 
+            SetupUI();
+            LoadData(); 
+            listView1.Controls.Clear();
+            listView1.Size = defaultListViewSize;
+            this.Size = defaultFormSize;
         }
+
     }
 }

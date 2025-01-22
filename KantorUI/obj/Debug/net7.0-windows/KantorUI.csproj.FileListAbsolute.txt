@@ -22,4 +22,3 @@ E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorUI\obj\Debug\net7.0-windows
 E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorUI\obj\Debug\net7.0-windows\KantorUI.Form2.resources
 E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorUI\obj\Debug\net7.0-windows\KantorUI.Form3.resources
 E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorUI\obj\Debug\net7.0-windows\KantorUI.Form4.resources
-E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorUI\obj\Debug\net7.0-windows\KantorUI.Form5.resources

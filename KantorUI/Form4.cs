@@ -7,7 +7,7 @@ using System.Text.Json;
 using System.Windows.Forms;
 using KantorLibrary.Models;
 using KantorLibrary.Services;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace KantorUI
 {
@@ -81,11 +81,36 @@ namespace KantorUI
                 var adresy = LoadFromJson<List<Adres>>(filePathAdresy);
                 var zamowienia = LoadFromJson<List<Zamowienie>>(filePathZamowienia);
 
+                this.zamowienia = zamowienia;
+                this.kursy = kursy;
+                this.lokalizacje = lokalizacje;
+                this.adresy = adresy;
+
                 if (konta == null || kursy == null || lokalizacje == null || adresy == null || zamowienia == null)
                 {
                     MessageBox.Show("Błąd podczas ładowania danych.");
                     return;
                 }
+
+                // Dodanie pustych opcji do combobox4, combobox5, combobox6
+                kursy.Insert(0, new Kurs { Id = 0, Waluta = "" });
+
+                var stronyOpisowe = new List<string> { "", "Kupno", "Sprzedaż" };
+
+                var sortOptions = new List<string>
+        {
+            "",
+            "Data zamówienia (rosnąco)",
+            "Data zamówienia (malejąco)",
+            "Wartość (rosnąco)",
+            "Wartość (malejąco)",
+            "Ilość (rosnąco)",
+            "Ilość (malejąco)",
+            "Kurs (rosnąco)",
+            "Kurs (malejąco)",
+            "Strona (rosnąco)",
+            "Strona (malejąco)"
+        };
 
                 comboBox1.DataSource = kursy;
                 comboBox1.DisplayMember = "Waluta";
@@ -98,6 +123,14 @@ namespace KantorUI
                 comboBox3.DataSource = adresy;
                 comboBox3.DisplayMember = "PelnyAdres";
                 comboBox3.ValueMember = "Id";
+
+                comboBox4.DataSource = kursy;
+                comboBox4.DisplayMember = "Waluta";
+                comboBox4.ValueMember = "Id";
+
+                comboBox5.DataSource = stronyOpisowe;
+
+                comboBox6.DataSource = sortOptions;
 
                 var kontaDlaKlienta = konta.Where(k => k.KlientId == KlientId).ToList();
 
@@ -132,46 +165,16 @@ namespace KantorUI
                         : "Nieprawidłowe dane. Liczba jest ujemna");
 
                     listView1.Items.Add(item);
+                    AddAddButton(item, konto);
+                    AddSubButton(item, konto);
                 }
 
                 label2.Text = $"Suma wartości walut w PLN: {sumaWPln.ToString("C2", CultureInfo.CurrentCulture)}";
 
-                comboBox4.DataSource = kursy;
-                comboBox4.DisplayMember = "Waluta";
-                comboBox4.ValueMember = "Id";
-
-                var strony = zamowienia.Select(z => z.Strona).Distinct().ToList();
-
-                // Zamiana 'K' na "Kupno" i 'S' na "Sprzedaż"
-                var stronyOpisowe = strony.Select(strona =>
-                    strona == 'K' ? "Kupno" :
-                    (strona == 'S' ? "Sprzedaż" : "Nieznane")).ToList();
-
-                // Ustawienie źródła danych w ComboBox
-                comboBox5.DataSource = stronyOpisowe;
-
-                var sortOptions = new List<string> {
-                    "Data zamówienia (rosnąco)",
-                    "Data zamówienia (malejąco)",
-                    "Wartość (rosnąco)",
-                    "Wartość (malejąco)",
-                    "Lokalizacja (rosnąco)",
-                    "Lokalizacja (malejąco)",
-                    "Waluta (rosnąco)",
-                    "Waluta (malejąco)",
-                    "Ilość (rosnąco)",
-                    "Ilość (malejąco)",
-                    "Kurs (rosnąco)",
-                    "Kurs (malejąco)",
-                    "Strona (rosnąco)",
-                    "Strona (malejąco)"
-
-                };
-                comboBox6.DataSource = sortOptions;
-
                 // Wyświetlenie złożonych zamówień w ListView2
                 listView2.Items.Clear();
                 listView2.Columns.Clear();
+                listView2.Columns.Add("Data zamówienia", 125);
                 listView2.Columns.Add("Waluta");
                 listView2.Columns.Add("Ilość");
                 listView2.Columns.Add("Wartość");
@@ -192,7 +195,8 @@ namespace KantorUI
 
                     if (kurs != null && lokalizacja != null && adres != null)
                     {
-                        ListViewItem item = new ListViewItem(kurs.Waluta);
+                        ListViewItem item = new ListViewItem(zamowienie.Data.ToString("yyyy-MM-dd"));
+                        item.SubItems.Add(kurs.Waluta);
                         item.SubItems.Add(zamowienie.Ilosc.ToString());
                         item.SubItems.Add(zamowienie.Wartosc.ToString("F2", CultureInfo.InvariantCulture));
 
@@ -208,13 +212,283 @@ namespace KantorUI
                         listView2.Items.Add(item);
                     }
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Błąd podczas ładowania danych: {ex.Message}");
             }
         }
+        private void AddAddButton(ListViewItem item, Konto konto)
+        {
+            Button addFundsButton = new Button
+            {
+                Text = "+",
+                Tag = konto,
+                Size = new Size(20, 20),
+                Location = new Point(item.Bounds.Right, item.Bounds.Top)
+            };
+            addFundsButton.Click += AddFundsButton_Click;
+            listView1.Controls.Add(addFundsButton);
+        }
+        private void AddSubButton(ListViewItem item, Konto konto)
+        {
+            Button subFundsButton = new Button
+            {
+                Text = "-",
+                Tag = konto,
+                Size = new Size(20, 20),
+                Location = new Point(item.Bounds.Right+20, item.Bounds.Top)
+            };
+            subFundsButton.Click += SubFundsButton_Click;
+            listView1.Controls.Add(subFundsButton);
+        }
+
+        private void AddFundsButton_Click(object sender, EventArgs e)
+        {
+            if (sender is Button addFundsButton && addFundsButton.Tag is Konto konto)
+            {
+                // Otwieranie okna dodawania środków dla konta walutowego
+                ShowAddFundsForm(konto);
+            }
+        }
+        private void SubFundsButton_Click(object sender, EventArgs e)
+        {
+            if (sender is Button subFundsButton && subFundsButton.Tag is Konto konto)
+            {
+                ShowSubFundsForm(konto);
+            }
+        }
+        private void ShowAddFundsForm(Konto konto)
+        {
+            // Tworzenie formularza dodawania środków
+            Form addFundsForm = new Form
+            {
+                Text = $"Dodaj środki na konto: {konto.Waluta}",
+                Size = new Size(300, 200)
+            };
+
+            Label amountLabel = new Label
+            {
+                Text = "Kwota:",
+                Location = new Point(10, 10)
+            };
+
+            TextBox amountTextBox = new TextBox
+            {
+                Location = new Point(10, 40),
+                Width = 100
+            };
+
+            Button saveButton = new Button
+            {
+                Text = "Dodaj",
+                Location = new Point(10, 80)
+            };
+
+            saveButton.Click += (sender, args) =>
+            {
+                try
+                {
+                    // Pobieranie kwoty do dodania
+                    if (!decimal.TryParse(amountTextBox.Text, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out decimal amountToAdd))
+                    {
+                        MessageBox.Show("Wprowadź poprawną kwotę.");
+                        return;
+                    }
+
+                    if (amountToAdd <= 0)
+                    {
+                        MessageBox.Show("Kwota musi być większa od zera.");
+                        return;
+                    }
+
+                    // Aktualizacja środków na koncie
+                    konto.Kwota += amountToAdd;
+
+                    // Aktualizacja w pliku JSON
+                    UpdateAccountInJson(konto);
+
+                    MessageBox.Show($"Środki zostały dodane na konto: {konto.Waluta}");
+
+                    // Odświeżenie widoku
+                    RefreshListView();
+
+                    addFundsForm.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Wystąpił błąd: {ex.Message}");
+                }
+            };
+
+            addFundsForm.Controls.Add(amountLabel);
+            addFundsForm.Controls.Add(amountTextBox);
+            addFundsForm.Controls.Add(saveButton);
+            addFundsForm.ShowDialog();
+        }
+        private void ShowSubFundsForm(Konto konto)
+        {
+            Form subFundsForm = new Form
+            {
+                Text = $"Wypłać środki z konta: {konto.Waluta}",
+                Size = new Size(300, 200)
+            };
+
+            Label amountLabel = new Label
+            {
+                Text = "Kwota:",
+                Location = new Point(10, 10)
+            };
+
+            TextBox amountTextBox = new TextBox
+            {
+                Location = new Point(10, 40),
+                Width = 100
+            };
+
+            Button saveButton = new Button
+            {
+                Text = "Wypłać",
+                Location = new Point(10, 80)
+            };
+
+            saveButton.Click += (sender, args) =>
+            {
+                try
+                {
+                    if (!decimal.TryParse(amountTextBox.Text, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out decimal amountToSubstract))
+                    {
+                        MessageBox.Show("Wprowadź poprawną kwotę.");
+                        return;
+                    }
+
+                    if (amountToSubstract <= 0)
+                    {
+                        MessageBox.Show("Kwota musi być większa od zera.");
+                        return;
+                    }
+
+                    // Aktualizacja środków na koncie
+                    konto.Kwota -= amountToSubstract;
+
+                    // Aktualizacja w pliku JSON
+                    UpdateAccountInJson(konto);
+
+                    MessageBox.Show($"Środki zostały wypłacone z konta: {konto.Waluta}");
+
+                    // Odświeżenie widoku
+                    RefreshListView();
+
+                    subFundsForm.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Wystąpił błąd: {ex.Message}");
+                }
+            };
+
+            subFundsForm.Controls.Add(amountLabel);
+            subFundsForm.Controls.Add(amountTextBox);
+            subFundsForm.Controls.Add(saveButton);
+            subFundsForm.ShowDialog();
+        }
+
+        private void UpdateAccountInJson(Konto konto)
+        {
+            try
+            {
+                string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+                string jsonFilePath = Path.Combine(projectDirectory, "KantorLibrary", "Data", "konta.json");
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    MessageBox.Show("Plik z danymi kont nie istnieje.");
+                    return;
+                }
+
+                string jsonContent = File.ReadAllText(jsonFilePath);
+                var konta = JsonSerializer.Deserialize<List<Konto>>(jsonContent) ?? new List<Konto>();
+
+                var kontoDoAktualizacji = konta.FirstOrDefault(k => k.Id == konto.Id);
+                if (kontoDoAktualizacji != null)
+                {
+                    kontoDoAktualizacji.Kwota = konto.Kwota;
+
+                    jsonContent = JsonSerializer.Serialize(konta, new JsonSerializerOptions { WriteIndented = true });
+                    File.WriteAllText(jsonFilePath, jsonContent);
+                }
+                else
+                {
+                    MessageBox.Show("Nie znaleziono konta do aktualizacji.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Wystąpił błąd podczas aktualizacji pliku JSON: {ex.Message}");
+            }
+        }
+
+        private void RefreshListView()
+        {
+            try
+            {
+                string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+                string jsonFilePath = Path.Combine(projectDirectory, "KantorLibrary", "Data", "konta.json");
+
+                if (!File.Exists(jsonFilePath))
+                {
+                    MessageBox.Show("Plik z danymi kont nie istnieje.");
+                    return;
+                }
+
+                string jsonContent = File.ReadAllText(jsonFilePath);
+                var konta = JsonSerializer.Deserialize<List<Konto>>(jsonContent) ?? new List<Konto>();
+
+                // Filtrowanie kont dla danego klienta
+                var kontaDlaKlienta = konta.Where(k => k.KlientId == KlientId).ToList();
+
+                listView1.Items.Clear();
+
+                if (kontaDlaKlienta.Count == 0)
+                {
+                    MessageBox.Show("Brak kont dla wskazanego klienta.");
+                    return;
+                }
+
+                listView1.Columns.Clear();
+                listView1.Columns.Add("Waluta");
+                listView1.Columns.Add("Kwota");
+
+                decimal sumaWPln = 0m;
+
+                foreach (var konto in kontaDlaKlienta)
+                {
+                    ListViewItem item = new ListViewItem
+                    {
+                        Text = konto.Waluta
+                    };
+
+                    decimal kwota = konto.Kwota;
+                    decimal kursDoPln = kursy.FirstOrDefault(k => k.Waluta == konto.Waluta)?.KursS ?? 0;
+                    decimal wartoscWPln = kwota * kursDoPln;
+
+                    sumaWPln += wartoscWPln;
+
+                    item.SubItems.Add(kwota >= 0
+                        ? kwota.ToString("F2", CultureInfo.InvariantCulture)
+                        : "Nieprawidłowe dane. Liczba jest ujemna");
+
+                    listView1.Items.Add(item);
+                    AddAddButton(item, konto);
+                    AddSubButton(item, konto);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Wystąpił błąd podczas odświeżania listy: {ex.Message}");
+            }
+        }
+
 
 
 
@@ -347,7 +621,8 @@ namespace KantorUI
                 DateTime dataOd = dateTimePicker1.Value;
                 DateTime dataDo = dateTimePicker2.Value;
 
-                string waluta = comboBox4.SelectedValue.ToString();
+                var walutaObj = (Kurs)comboBox4.SelectedItem;
+                string waluta = walutaObj.Waluta;
                 string strona = comboBox5.SelectedValue.ToString();
 
                 // Sprawdzenie, czy daty są poprawnie ustawione
@@ -361,13 +636,13 @@ namespace KantorUI
                 if (string.IsNullOrEmpty(waluta)) waluta = "USD";  // Przykład domyślnej waluty
                 if (string.IsNullOrEmpty(strona)) strona = "Kupno";  // Przykład domyślnej strony
 
-                // Filtracja danych
-                var filteredZamowienia = zamowienia.Where(z =>
-                    z.Data >= dataOd && z.Data <= dataDo &&
-                    (string.IsNullOrEmpty(waluta) || z.Kurs.Waluta == waluta) &&
-                    (strona == "Kupno" && z.Strona == 'K' || strona == "Sprzedaż" && z.Strona == 'S')
-                );
-
+                
+                var filteredZamowienia = zamowienia
+                    .Where(z => z.KursId == walutaObj.Id)
+                    .Where(z => z.Strona == strona[0])
+                    .Where(z => z.Data.Date >= dataOd.Date)
+                    .Where(z => z.Data.Date <= dataDo.Date)
+                    .ToList();
                 // Zadeklarowanie zmiennej przed użyciem
                 IOrderedEnumerable<Zamowienie> sortedZamowienia;
 
@@ -377,49 +652,37 @@ namespace KantorUI
                 switch (sortOption)
                 {
                     case "Data zamówienia (rosnąco)":
-                        sortedZamowienia = filteredZamowienia.OrderBy(z => z.Data);
+                        sortedZamowienia = zamowienia.OrderBy(z => z.Data);
                         break;
                     case "Data zamówienia (malejąco)":
-                        sortedZamowienia = filteredZamowienia.OrderByDescending(z => z.Data);
+                        sortedZamowienia = zamowienia.OrderByDescending(z => z.Data);
                         break;
                     case "Wartość (rosnąco)":
-                        sortedZamowienia = filteredZamowienia.OrderBy(z => z.Wartosc);
+                        sortedZamowienia = zamowienia.OrderBy(z => z.Wartosc);
                         break;
                     case "Wartość (malejąco)":
-                        sortedZamowienia = filteredZamowienia.OrderByDescending(z => z.Wartosc);
-                        break;
-                    case "Lokalizacja (rosnąco)":
-                        sortedZamowienia = filteredZamowienia.OrderBy(z => z.Lokalizacja.Miasto);
-                        break;
-                    case "Lokalizacja (malejąco)":
-                        sortedZamowienia = filteredZamowienia.OrderByDescending(z => z.Lokalizacja.Miasto);
-                        break;
-                    case "Waluta (rosnąco)":
-                        sortedZamowienia = filteredZamowienia.OrderBy(z => z.Kurs.Waluta);
-                        break;
-                    case "Waluta (malejąco)":
-                        sortedZamowienia = filteredZamowienia.OrderByDescending(z => z.Kurs.Waluta);
+                        sortedZamowienia = zamowienia.OrderByDescending(z => z.Wartosc);
                         break;
                     case "Ilość (rosnąco)":
-                        sortedZamowienia = filteredZamowienia.OrderBy(z => z.Ilosc);
+                        sortedZamowienia = zamowienia.OrderBy(z => z.Ilosc);
                         break;
                     case "Ilość (malejąco)":
-                        sortedZamowienia = filteredZamowienia.OrderByDescending(z => z.Ilosc);
+                        sortedZamowienia = zamowienia.OrderByDescending(z => z.Ilosc);
                         break;
                     case "Kurs (rosnąco)":
-                        sortedZamowienia = filteredZamowienia.OrderBy(z => z.CenaKursu);
+                        sortedZamowienia = zamowienia.OrderBy(z => z.CenaKursu);
                         break;
                     case "Kurs (malejąco)":
-                        sortedZamowienia = filteredZamowienia.OrderByDescending(z => z.CenaKursu);
+                        sortedZamowienia = zamowienia.OrderByDescending(z => z.CenaKursu);
                         break;
                     case "Strona (rosnąco)":
-                        sortedZamowienia = filteredZamowienia.OrderBy(z => z.Strona);
+                        sortedZamowienia = zamowienia.OrderBy(z => z.Strona);
                         break;
                     case "Strona (malejąco)":
-                        sortedZamowienia = filteredZamowienia.OrderByDescending(z => z.Strona);
+                        sortedZamowienia = zamowienia.OrderByDescending(z => z.Strona);
                         break;
                     default:
-                        sortedZamowienia = filteredZamowienia.OrderBy(z => z.Data); // Domyślnie sortuj po dacie rosnąco
+                        sortedZamowienia = zamowienia.OrderBy(z => z.Data); // Domyślnie sortuj po dacie rosnąco
                         break;
                 }
 
@@ -430,13 +693,14 @@ namespace KantorUI
                 listView2.Items.Clear();
                 foreach (var zamowienie in sortedZamowieniaList)
                 {
-                    var kurs = kursy.FirstOrDefault(k => k.Id == zamowienie.KursId);
+                    var kurs = this.kursy.FirstOrDefault(k => k.Id == zamowienie.KursId);
                     var lokalizacja = lokalizacje.FirstOrDefault(l => l.Id == zamowienie.LokalizacjaId);
                     var adres = adresy.FirstOrDefault(a => a.Id == zamowienie.AdresId);
 
                     if (kurs != null && lokalizacja != null && adres != null)
                     {
-                        ListViewItem item = new ListViewItem(kurs.Waluta);
+                        ListViewItem item = new ListViewItem(zamowienie.Data.ToString("yyyy-MM-dd"));
+                        item.SubItems.Add(kurs.Waluta);
                         item.SubItems.Add(zamowienie.Ilosc.ToString());
                         item.SubItems.Add(zamowienie.Wartosc.ToString("F2", CultureInfo.InvariantCulture));
                         item.SubItems.Add($"{lokalizacja.Miasto} {lokalizacja.KodKraju}");
@@ -452,14 +716,5 @@ namespace KantorUI
                 MessageBox.Show($"Błąd podczas filtrowania i sortowania danych: {ex.Message}");
             }
         }
-
-
-
-
-
-
-
-
-
     }
 }
