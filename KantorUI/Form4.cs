@@ -24,13 +24,11 @@ namespace KantorUI
         {
             InitializeComponent();
             this.KlientId = KlientId;
-            LoadData();  // Zamiast wywoływać oddzielnie LoadKonta i LoadAdresy
-
+            LoadData();  
         }
 
         private string idFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "lastTransactionId.txt");
 
-        // Metoda do pobrania ostatniego ID z pliku (lub 0, jeśli brak pliku)
         private int GetLastTransactionId()
         {
             try
@@ -51,7 +49,6 @@ namespace KantorUI
             return 0;
         }
 
-        // Metoda do zapisania nowego ostatniego ID do pliku
         private void SaveLastTransactionId(int id)
         {
             try
@@ -64,7 +61,6 @@ namespace KantorUI
             }
         }
 
-        // Nowa metoda do ładowania danych
         private void LoadData()
         {
             try
@@ -93,7 +89,6 @@ namespace KantorUI
                     return;
                 }
 
-                // Dodanie pustych opcji do combobox4, combobox5, combobox6
                 kursy.Insert(0, new Kurs { Id = 0, Waluta = "" });
 
                 var stronyOpisowe = new List<string> { "", "Kupno", "Sprzedaż" };
@@ -121,19 +116,18 @@ namespace KantorUI
                 comboBox2.DisplayMember = "Kantor";
                 comboBox2.ValueMember = "Id";
 
-                // Pobranie adresów dla wybranego klienta
                 var adresyDlaKlienta = adresy.Where(a => a.KlientId == KlientId).ToList();
 
                 if (adresyDlaKlienta.Count == 0)
                 {
                     MessageBox.Show("Brak adresów przypisanych do wskazanego klienta.");
-                    comboBox3.DataSource = null; // Ustawienie pustego źródła danych
+                    comboBox3.DataSource = null; 
                 }
                 else
                 {
                     comboBox3.DataSource = adresyDlaKlienta;
-                    comboBox3.DisplayMember = "PelnyAdres"; // Kolumna z pełnym adresem
-                    comboBox3.ValueMember = "Id"; // Identyfikator adresu
+                    comboBox3.DisplayMember = "PelnyAdres"; 
+                    comboBox3.ValueMember = "Id"; 
                 }
 
 
@@ -184,7 +178,6 @@ namespace KantorUI
 
                 label2.Text = $"Suma wartości walut w PLN: {sumaWPln.ToString("C2", CultureInfo.CurrentCulture)}";
 
-                // Wyświetlenie złożonych zamówień w ListView2
                 listView2.Items.Clear();
                 listView2.Columns.Clear();
                 listView2.Columns.Add("Data zamówienia", 125);
@@ -195,7 +188,6 @@ namespace KantorUI
                 listView2.Columns.Add("Adres", 400);
                 listView2.Columns.Add("Strona");
 
-                // Ustawienie trybu wyświetlania na szczegóły
                 listView2.View = View.Details;
 
                 var zamowieniaDlaKlienta = zamowienia.Where(z => z.KlientId == KlientId).ToList();
@@ -213,13 +205,10 @@ namespace KantorUI
                         item.SubItems.Add(zamowienie.Ilosc.ToString());
                         item.SubItems.Add(zamowienie.Wartosc.ToString("F2", CultureInfo.InvariantCulture));
 
-                        // Dodanie lokalizacji (miasto i kod kraju)
                         item.SubItems.Add($"{lokalizacja.Miasto} {lokalizacja.KodKraju}");
 
-                        // Dodanie pełnego adresu
                         item.SubItems.Add(adres.PelnyAdres);
 
-                        // Dodanie strony transakcji (Kupno/Sprzedaż)
                         item.SubItems.Add(zamowienie.Strona == 'K' ? "Kupno" : "Sprzedaż");
 
                         listView2.Items.Add(item);
@@ -260,7 +249,6 @@ namespace KantorUI
         {
             if (sender is Button addFundsButton && addFundsButton.Tag is Konto konto)
             {
-                // Otwieranie okna dodawania środków dla konta walutowego
                 ShowAddFundsForm(konto);
             }
         }
@@ -273,7 +261,6 @@ namespace KantorUI
         }
         private void ShowAddFundsForm(Konto konto)
         {
-            // Tworzenie formularza dodawania środków
             Form addFundsForm = new Form
             {
                 Text = $"Dodaj środki na konto: {konto.Waluta}",
@@ -302,10 +289,8 @@ namespace KantorUI
             {
                 try
                 {
-                    // Zmiana wartości kursów
                     konto.Kwota = decimal.Parse(amountTextBox.Text, CultureInfo.InvariantCulture);
 
-                    // Deserializacja istniejącej kolekcji kursów z pliku JSON
                     string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
                     string jsonFilePath = Path.Combine(projectDirectory, "KantorLibrary", "Data", "konta.json");
                     string jsonContent = File.ReadAllText(jsonFilePath);
@@ -318,14 +303,12 @@ namespace KantorUI
                     {
                         kontoDoAktualizacji.Kwota += konto.Kwota;
 
-                        // Serializacja kolekcji z powrotem do pliku JSON
                         jsonContent = JsonSerializer.Serialize(konta, new JsonSerializerOptions { WriteIndented = true });
                         File.WriteAllText(jsonFilePath, jsonContent);
 
                         MessageBox.Show($"Zaktualizowano dla: {konto.Waluta}");
 
-                        // Odświeżenie ListView w głównym oknie - Natychmiastowe odświeżenie
-                        UpdateKontaListView(konta, KlientId); // Odświeżenie ListView na głównym wątku
+                        UpdateKontaListView(konta, KlientId); 
                     }
                     else
                     {
@@ -375,10 +358,8 @@ namespace KantorUI
             {
                 try
                 {
-                    // Zmiana wartości kursów
                     konto.Kwota = decimal.Parse(amountTextBox.Text, CultureInfo.InvariantCulture);
 
-                    // Deserializacja istniejącej kolekcji kursów z pliku JSON
                     string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
                     string jsonFilePath = Path.Combine(projectDirectory, "KantorLibrary", "Data", "konta.json");
                     string jsonContent = File.ReadAllText(jsonFilePath);
@@ -391,14 +372,12 @@ namespace KantorUI
                     {
                         kontoDoAktualizacji.Kwota -= konto.Kwota;
 
-                        // Serializacja kolekcji z powrotem do pliku JSON
                         jsonContent = JsonSerializer.Serialize(konta, new JsonSerializerOptions { WriteIndented = true });
                         File.WriteAllText(jsonFilePath, jsonContent);
 
                         MessageBox.Show($"Zaktualizowano konto: {konto.Waluta}");
 
-                        // Odświeżenie ListView w głównym oknie - Natychmiastowe odświeżenie
-                        UpdateKontaListView(konta, KlientId); // Odświeżenie ListView na głównym wątku
+                        UpdateKontaListView(konta, KlientId); 
                     }
                     else
                     {
@@ -422,7 +401,7 @@ namespace KantorUI
         public void UpdateKontaListView(List<Konto> konta, int klientId)
         {
             listView1.Items.Clear();
-            var kontaDlaKlienta = konta.Where(k => k.KlientId == klientId).ToList(); // Filtrujemy konta na podstawie id klienta
+            var kontaDlaKlienta = konta.Where(k => k.KlientId == klientId).ToList(); 
 
             foreach (var konto in kontaDlaKlienta)
             {
@@ -431,13 +410,13 @@ namespace KantorUI
                     konto.Waluta,
                     konto.Kwota.ToString("F2", CultureInfo.InvariantCulture),
                 });
-                listView1.Items.Add(item); // Dodawanie nowych elementów do ListView
+                listView1.Items.Add(item); 
             }
         }
 
 
 
-        // Metoda do ogólnego ładowania danych z JSON
+
         private T LoadFromJson<T>(string filePath)
         {
             try
@@ -473,19 +452,16 @@ namespace KantorUI
         {
             try
             {
-                // Pobierz dane z ComboBox
                 int wybranyKursId = (int)comboBox1.SelectedValue;
                 int wybranaLokalizacjaId = (int)comboBox2.SelectedValue;
                 int wybranyAdresId = (int)comboBox3.SelectedValue;
 
-                // Pobierz ilość z textBox1 i sprawdź poprawność
                 if (!int.TryParse(textBox1.Text, out int ilosc) || ilosc < 0)
                 {
                     MessageBox.Show("Wprowadź poprawną, nieujemną ilość.");
                     return;
                 }
 
-                // Sprawdzenie zaznaczonego RadioButtona
                 char strona = radioButton1.Checked ? 'K' : (radioButton2.Checked ? 'S' : ' ');
 
                 if (strona == ' ')
@@ -494,7 +470,6 @@ namespace KantorUI
                     return;
                 }
 
-                // Wczytanie danych konta klienta
                 string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
                 string filePathKonta = Path.Combine(projectDirectory, "KantorLibrary", "Data", "konta.json");
                 List<Konto> konta = LoadFromJson<List<Konto>>(filePathKonta);
@@ -506,23 +481,19 @@ namespace KantorUI
                     return;
                 }
 
-                // Sprawdzenie, czy ilość nie przekracza dostępnych środków
                 if (ilosc > kontoKlienta.Kwota)
                 {
                     MessageBox.Show("Nie masz wystarczających środków na koncie do realizacji tej transakcji.");
                     return;
                 }
 
-                // Pobranie ostatniego ID transakcji
                 int lastTransactionId = GetLastTransactionId();
                 int newTransactionId = lastTransactionId + 1;
                 SaveLastTransactionId(newTransactionId);
 
-                // Wczytanie kursu
                 string filePathKursy = Path.Combine(projectDirectory, "KantorLibrary", "Data", "kursy.json");
                 List<Kurs> kursy = LoadFromJson<List<Kurs>>(filePathKursy);
 
-                // Sprawdzanie poprawności kursu
                 Kurs wybranyKurs = kursy?.FirstOrDefault(k => k.Id == wybranyKursId);
                 if (wybranyKurs == null)
                 {
@@ -535,7 +506,6 @@ namespace KantorUI
 
                 MessageBox.Show($"Transakcja nr {newTransactionId} została zakończona. Kwota: {transakcjaWartosc.ToString("C2", CultureInfo.CurrentCulture)}");
 
-                // Zapisanie transakcji do pliku
                 string filePathZamowienia = Path.Combine(projectDirectory, "KantorLibrary", "Data", "zamowienia.json");
                 var zamowienie = new Zamowienie
                 {
@@ -569,12 +539,10 @@ namespace KantorUI
         {
             try
             {
-                // Ustawienie domyślnych wartości, jeśli kontrolki są puste
-                if (comboBox4.SelectedValue == null) comboBox4.SelectedIndex = 0;  // Ustawienie pierwszej waluty
-                if (comboBox5.SelectedValue == null) comboBox5.SelectedIndex = 0;  // Ustawienie pierwszej strony (Kupno/Sprzedaż)
-                if (comboBox6.SelectedItem == null) comboBox6.SelectedIndex = 0;  // Ustawienie pierwszej opcji sortowania
+                if (comboBox4.SelectedValue == null) comboBox4.SelectedIndex = 0;  
+                if (comboBox5.SelectedValue == null) comboBox5.SelectedIndex = 0;  
+                if (comboBox6.SelectedItem == null) comboBox6.SelectedIndex = 0; 
 
-                // Pobranie wartości z kontrolek
                 DateTime dataOd = dateTimePicker1.Value;
                 DateTime dataDo = dateTimePicker2.Value;
 
@@ -582,16 +550,15 @@ namespace KantorUI
                 string waluta = walutaObj.Waluta;
                 string strona = comboBox5.SelectedValue.ToString();
 
-                // Sprawdzenie, czy daty są poprawnie ustawione
                 if (dataOd == null || dataDo == null)
                 {
                     MessageBox.Show("Proszę wybrać zakres dat.");
                     return;
                 }
 
-                // Jeśli waluta lub strona są puste, ustaw domyślne wartości
-                if (string.IsNullOrEmpty(waluta)) waluta = "USD";  // Przykład domyślnej waluty
-                if (string.IsNullOrEmpty(strona)) strona = "Kupno";  // Przykład domyślnej strony
+                
+                if (string.IsNullOrEmpty(waluta)) waluta = "USD";  
+                if (string.IsNullOrEmpty(strona)) strona = "Kupno";  
 
 
                 var filteredZamowienia = zamowienia
@@ -600,10 +567,8 @@ namespace KantorUI
                     .Where(z => z.Data.Date >= dataOd.Date)
                     .Where(z => z.Data.Date <= dataDo.Date)
                     .ToList();
-                // Zadeklarowanie zmiennej przed użyciem
                 IOrderedEnumerable<Zamowienie> sortedZamowienia;
 
-                // Sortowanie danych
                 string sortOption = comboBox6.SelectedItem.ToString();
 
                 switch (sortOption)
@@ -639,14 +604,12 @@ namespace KantorUI
                         sortedZamowienia = zamowienia.OrderByDescending(z => z.Strona);
                         break;
                     default:
-                        sortedZamowienia = zamowienia.OrderBy(z => z.Data); // Domyślnie sortuj po dacie rosnąco
+                        sortedZamowienia = zamowienia.OrderBy(z => z.Data); 
                         break;
                 }
 
-                // Zamiana z IOrderedEnumerable na List<Zamowienie>
                 var sortedZamowieniaList = sortedZamowienia.ToList();
 
-                // Wyświetlanie posortowanych i przefiltrowanych danych w ListView
                 listView2.Items.Clear();
                 foreach (var zamowienie in sortedZamowieniaList)
                 {
@@ -681,7 +644,6 @@ namespace KantorUI
 
         private void ShowAddAdresForm()
         {
-            // Tworzenie formularza dodawania środków
             Form addAdresForm = new Form
             {
                 Text = "Formularz dodawania adresu:",
@@ -777,7 +739,74 @@ namespace KantorUI
 
             addButton.Click += (sender, args) =>
             {
-                
+
+                string street = streetTextBox.Text.Trim();
+                if (string.IsNullOrEmpty(street))
+                {
+                    MessageBox.Show("Proszę podać ulicę.");
+                    return;
+                }
+
+                string homeNumber = homeNumberTextBox.Text.Trim();
+                if (string.IsNullOrEmpty(homeNumber))
+                {
+                    MessageBox.Show("Proszę podać numer domu.");
+                    return;
+                }
+
+                int flatNumber;
+                if (!int.TryParse(flatNumberTextBox.Text, out flatNumber))
+                {
+                    MessageBox.Show("Nieprawidłowy format numeru mieszkania. Wprowadź liczbę całkowitą.");
+                    return;
+                }
+
+                string postCode = postCodeTextBox.Text.Trim();
+                if (string.IsNullOrEmpty(postCode))
+                {
+                    MessageBox.Show("Proszę podać kod pocztowy.");
+                    return;
+                }
+
+                string city = cityTextBox.Text.Trim();
+                if (string.IsNullOrEmpty(city))
+                {
+                    MessageBox.Show("Proszę podać miasto.");
+                    return;
+                }
+
+                string addressType = addressTypeComboBox.SelectedItem?.ToString();
+
+                Adres newAddress = new Adres
+                {
+                    KlientId = KlientId,
+                    Ulica = street,
+                    NrDomu = homeNumber,
+                    NrMieszkania = flatNumber,
+                    KodPocztowy = postCode,
+                    Miasto = city,
+                    TypAdresu = addressType
+                };
+
+                adresy.Add(newAddress);
+
+                int newAddressId = adresy.Max(a => a.Id) + 1;
+                newAddress.Id = newAddressId;
+
+                string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+                string filePathAdresy = Path.Combine(projectDirectory, "KantorLibrary", "Data", "adresy.json");
+                List<Adres> existingAddresses = LoadFromJson<List<Adres>>(filePathAdresy);
+                existingAddresses.Add(newAddress);
+                SaveToJson(filePathAdresy, existingAddresses);
+
+                comboBox3.DataSource = null;
+                comboBox3.DataSource = adresy.Where(a => a.KlientId == KlientId).ToList();
+                comboBox3.DisplayMember = "PelnyAdres";
+                comboBox3.ValueMember = "Id";
+
+                addAdresForm.Close();
+
+                MessageBox.Show("Adres został dodany pomyślnie.");
             };
 
             addAdresForm.Controls.Add(streetLabel);
@@ -800,6 +829,30 @@ namespace KantorUI
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (comboBox3.SelectedIndex == -1)
+            {
+                MessageBox.Show("Proszę wybrać adres do usunięcia.");
+                return;
+            }
+
+            int selectedAddressId = (int)comboBox3.SelectedValue;
+
+            Adres addressToRemove = adresy.FirstOrDefault(a => a.Id == selectedAddressId);
+            adresy.Remove(addressToRemove);
+
+            comboBox3.DataSource = null;
+            comboBox3.DataSource = adresy.Where(a => a.KlientId == KlientId).ToList();
+
+            string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+            string filePathAdresy = Path.Combine(projectDirectory, "KantorLibrary", "Data", "adresy.json");
+            SaveToJson(filePathAdresy, adresy);
+            MessageBox.Show("Adres został usunięty.");
+
+            comboBox3.DataSource = null;
+            comboBox3.DataSource = adresy.Where(a => a.KlientId == KlientId).ToList();
+            comboBox3.DisplayMember = "PelnyAdres";
+            comboBox3.ValueMember = "Id";
+
             
         }
 

@@ -323,6 +323,7 @@
             button4.TabIndex = 25;
             button4.Text = "Usuń adres";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
