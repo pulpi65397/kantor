@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.DirectoryServices;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -120,9 +121,21 @@ namespace KantorUI
                 comboBox2.DisplayMember = "Kantor";
                 comboBox2.ValueMember = "Id";
 
-                comboBox3.DataSource = adresy;
-                comboBox3.DisplayMember = "PelnyAdres";
-                comboBox3.ValueMember = "Id";
+                // Pobranie adresów dla wybranego klienta
+                var adresyDlaKlienta = adresy.Where(a => a.KlientId == KlientId).ToList();
+
+                if (adresyDlaKlienta.Count == 0)
+                {
+                    MessageBox.Show("Brak adresów przypisanych do wskazanego klienta.");
+                    comboBox3.DataSource = null; // Ustawienie pustego źródła danych
+                }
+                else
+                {
+                    comboBox3.DataSource = adresyDlaKlienta;
+                    comboBox3.DisplayMember = "PelnyAdres"; // Kolumna z pełnym adresem
+                    comboBox3.ValueMember = "Id"; // Identyfikator adresu
+                }
+
 
                 comboBox4.DataSource = kursy;
                 comboBox4.DisplayMember = "Waluta";
@@ -660,5 +673,135 @@ namespace KantorUI
                 MessageBox.Show($"Błąd podczas filtrowania i sortowania danych: {ex.Message}");
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ShowAddAdresForm();
+        }
+
+        private void ShowAddAdresForm()
+        {
+            // Tworzenie formularza dodawania środków
+            Form addAdresForm = new Form
+            {
+                Text = "Formularz dodawania adresu:",
+                Size = new Size(300, 300)
+            };
+
+            Label streetLabel = new Label
+            {
+                Text = "Ulica:",
+                Location = new Point(10, 10)
+            };
+
+            TextBox streetTextBox = new TextBox
+            {
+                Location = new Point(150, 10),
+                Width = 100
+            };
+
+            Label homeNumberLabel = new Label
+            {
+                Text = "Numer domu:",
+                Location = new Point(10, 50)
+            };
+
+            TextBox homeNumberTextBox = new TextBox
+            {
+                Location = new Point(150, 50),
+                Width = 100
+            };
+
+            Label flatNumberLabel = new Label
+            {
+                Text = "Nr mieszkania:",
+                Location = new Point(10, 80)
+            };
+
+            TextBox flatNumberTextBox = new TextBox
+            {
+                Location = new Point(150, 80),
+                Width = 100
+            };
+
+            Label postCodeLabel = new Label
+            {
+                Text = "Kod pocztowy:",
+                Location = new Point(10, 110)
+            };
+
+            TextBox postCodeTextBox = new TextBox
+            {
+                Location = new Point(150, 110),
+                Width = 100
+            };
+
+            Label cityLabel = new Label
+            {
+                Text = "Miasto:",
+                Location = new Point(10, 140)
+            };
+
+            TextBox cityTextBox = new TextBox
+            {
+                Location = new Point(150, 140),
+                Width = 100
+            };
+
+            Label addressTypeLabel = new Label
+            {
+                Text = "Typ adresu:",
+                Location = new Point(10, 170)
+            };
+
+            var typAdresu = new List<string>
+    {
+        "Adres zamieszkania",
+        "Adres korespondencyjny",
+        "Adres firmy"
+    };
+
+            ComboBox addressTypeComboBox = new ComboBox
+            {
+                Location = new Point(150, 170),
+                Width = 120
+            };
+
+            addressTypeComboBox.Items.AddRange(typAdresu.ToArray());
+
+            Button addButton = new Button
+            {
+                Text = "Dodaj",
+                Location = new Point(10, 200)
+            };
+
+            addButton.Click += (sender, args) =>
+            {
+                
+            };
+
+            addAdresForm.Controls.Add(streetLabel);
+            addAdresForm.Controls.Add(streetTextBox);
+            addAdresForm.Controls.Add(homeNumberLabel);
+            addAdresForm.Controls.Add(homeNumberTextBox);
+            addAdresForm.Controls.Add(flatNumberLabel);
+            addAdresForm.Controls.Add(flatNumberTextBox);
+            addAdresForm.Controls.Add(postCodeLabel);
+            addAdresForm.Controls.Add(postCodeTextBox);
+            addAdresForm.Controls.Add(cityLabel);
+            addAdresForm.Controls.Add(cityTextBox);
+            addAdresForm.Controls.Add(addressTypeLabel);
+            addAdresForm.Controls.Add(addressTypeComboBox);
+            addAdresForm.Controls.Add(addButton);
+            addAdresForm.ShowDialog();
+        }
+
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }
