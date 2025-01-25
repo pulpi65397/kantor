@@ -13,16 +13,11 @@ namespace KantorUI
     public partial class Form1 : Form
     {
         private char userType;
-        private Size defaultFormSize;
-        private Size defaultListViewSize;
 
-
-        public Form1(char userType)  
+        public Form1(char userType)  // Poprawiony konstruktor
         {
             InitializeComponent();
             this.userType = userType;
-            defaultFormSize = this.Size;
-            defaultListViewSize = listView1.Size;
             LoadData();
             SetupUI();
         }
@@ -79,7 +74,7 @@ namespace KantorUI
                     item.SubItems.Add(kurs.KursS.ToString("0.####", CultureInfo.InvariantCulture));
                     listView1.Items.Add(item);
 
-                    if (userType == 'A')
+                    if (userType == 'A') // Tylko dla administratora
                     {
                         AddEditButton(item, kurs);
                     }
@@ -93,23 +88,23 @@ namespace KantorUI
 
         private void SetupUI()
         {
-            if (userType == 'U') 
+            if (userType == 'U')  // U¿ytkownik niezalogowany
             {
-
+                // Poka¿ przyciski logowania i rejestracji
                 loginButton.Visible = true;
                 registerButton.Visible = true;
                 logoutButton.Visible = false;
             }
-            else if (userType == 'K')  
+            else if (userType == 'K')  // U¿ytkownik zalogowany bez uprawnieñ administratora
             {
-
+                // Poka¿ tylko przycisk wylogowania
                 loginButton.Visible = false;
                 registerButton.Visible = false;
                 logoutButton.Visible = true;
             }
-            else if (userType == 'A')  
+            else if (userType == 'A')  // Administrator
             {
-
+                // Poka¿ tylko przycisk wylogowania oraz rozszerzon¹ funkcjonalnoœæ
                 loginButton.Visible = false;
                 registerButton.Visible = false;
                 logoutButton.Visible = true;
@@ -136,14 +131,14 @@ namespace KantorUI
         {
             if (sender is Button editButton && editButton.Tag is Kurs kurs)
             {
-
+                // Otwieranie okna edycji kursów dla administratora
                 ShowEditForm(kurs);
             }
         }
 
         private void ShowEditForm(Kurs kurs)
         {
-
+            // Przyk³adowe okno edycji kursów
             Form editForm = new Form
             {
                 Text = $"Edycja kursu: {kurs.Waluta}",
@@ -174,10 +169,11 @@ namespace KantorUI
             {
                 try
                 {
-
+                    // Zmiana wartoœci kursów
                     kurs.KursK = decimal.Parse(buyCourseTextBox.Text, CultureInfo.InvariantCulture);
                     kurs.KursS = decimal.Parse(sellCourseTextBox.Text, CultureInfo.InvariantCulture);
 
+                    // Deserializacja istniej¹cej kolekcji kursów z pliku JSON
                     string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
                     string jsonFilePath = Path.Combine(projectDirectory, "KantorLibrary", "Data", "kursy.json");
                     string jsonContent = File.ReadAllText(jsonFilePath);
@@ -189,12 +185,14 @@ namespace KantorUI
                         kursDoAktualizacji.KursK = kurs.KursK;
                         kursDoAktualizacji.KursS = kurs.KursS;
 
+                        // Serializacja kolekcji z powrotem do pliku JSON
                         jsonContent = JsonSerializer.Serialize(kursy, new JsonSerializerOptions { WriteIndented = true });
                         File.WriteAllText(jsonFilePath, jsonContent);
 
                         MessageBox.Show($"Zaktualizowano kursy dla: {kurs.Waluta}");
 
-                        UpdateKursyListView(kursy); 
+                        // Odœwie¿enie ListView w g³ównym oknie - Natychmiastowe odœwie¿enie
+                        UpdateKursyListView(kursy); // Odœwie¿enie ListView na g³ównym w¹tku
                     }
                     else
                     {
@@ -247,7 +245,7 @@ namespace KantorUI
                     }
                 }
 
-                listView1.Items.Add(item); 
+                listView1.Items.Add(item); // Dodawanie nowych elementów do ListView
             }
         }
 
@@ -269,17 +267,13 @@ namespace KantorUI
         {
             if (Application.OpenForms["Form4"] != null)
             {
-                Application.OpenForms["Form4"].Close();  
+                Application.OpenForms["Form4"].Close();  // Zamykamy Form4
             }
-
+            // Implementacja wylogowania i powrotu do trybu niezalogowanego
             MessageBox.Show("Wylogowano");
-            this.userType = 'U'; 
-            SetupUI();
-            LoadData(); 
-            listView1.Controls.Clear();
-            listView1.Size = defaultListViewSize;
-            this.Size = defaultFormSize;
+            this.userType = 'U';  // Zmiana typu u¿ytkownika na niezalogowanego
+            SetupUI();  // Zaktualizowanie interfejsu
+            // Opcjonalnie: Odœwie¿ dane bez funkcji administracyjnych
         }
-
     }
 }

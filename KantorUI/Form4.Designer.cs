@@ -55,8 +55,6 @@
             button2 = new Button();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
-            button4 = new Button();
-            button3 = new Button();
             groupBox3 = new GroupBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -68,7 +66,7 @@
             listView1.Anchor = AnchorStyles.Left;
             listView1.Location = new Point(4, 16);
             listView1.Name = "listView1";
-            listView1.Size = new Size(175, 143);
+            listView1.Size = new Size(155, 143);
             listView1.TabIndex = 26;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -251,7 +249,7 @@
             // 
             listView2.Location = new Point(6, 66);
             listView2.Name = "listView2";
-            listView2.Size = new Size(972, 282);
+            listView2.Size = new Size(772, 141);
             listView2.TabIndex = 3;
             listView2.UseCompatibleStateImageBehavior = false;
             // 
@@ -295,8 +293,6 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(button4);
-            groupBox2.Controls.Add(button3);
             groupBox2.Controls.Add(label4);
             groupBox2.Controls.Add(comboBox1);
             groupBox2.Controls.Add(label5);
@@ -310,30 +306,10 @@
             groupBox2.Controls.Add(button1);
             groupBox2.Location = new Point(262, 12);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(746, 190);
+            groupBox2.Size = new Size(529, 190);
             groupBox2.TabIndex = 29;
             groupBox2.TabStop = false;
             groupBox2.Text = "Formularz zamówienia";
-            // 
-            // button4
-            // 
-            button4.Location = new Point(581, 104);
-            button4.Name = "button4";
-            button4.Size = new Size(100, 23);
-            button4.TabIndex = 25;
-            button4.Text = "Usuń adres";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(475, 104);
-            button3.Name = "button3";
-            button3.Size = new Size(100, 23);
-            button3.TabIndex = 24;
-            button3.Text = "Dodaj adres";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
             // 
             // groupBox3
             // 
@@ -351,7 +327,7 @@
             groupBox3.Controls.Add(comboBox5);
             groupBox3.Location = new Point(8, 208);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(1000, 375);
+            groupBox3.Size = new Size(783, 221);
             groupBox3.TabIndex = 30;
             groupBox3.TabStop = false;
             groupBox3.Text = "Zamówienia klienta";
@@ -360,7 +336,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1024, 600);
+            ClientSize = new Size(798, 440);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -404,7 +380,5 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
-        private Button button4;
-        private Button button3;
     }
 }

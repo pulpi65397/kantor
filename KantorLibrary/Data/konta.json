@@ -1,25 +1,484 @@
 [
   {
-    "Id": 3,
-    "KlientId": 3,
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 0,
+    "Klient": null,
+    "Waluta": null,
+    "Grafika": null,
+    "Kwota": 0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 6,
     "Klient": null,
     "Waluta": "PLN",
     "Grafika": null,
-    "Kwota": 10003.00,
+    "Kwota": 9999.00,
     "Data": "0001-01-01T00:00:00"
   },
   {
-    "Id": 3,
-    "KlientId": 3,
+    "Id": 0,
+    "KlientId": 6,
     "Klient": null,
     "Waluta": "USD",
     "Grafika": null,
-    "Kwota": 0.00,
+    "Kwota": 1000.00,
     "Data": "0001-01-01T00:00:00"
   },
   {
-    "Id": 3,
-    "KlientId": 3,
+    "Id": 0,
+    "KlientId": 6,
     "Klient": null,
     "Waluta": "EUR",
     "Grafika": null,
@@ -27,8 +486,8 @@
     "Data": "0001-01-01T00:00:00"
   },
   {
-    "Id": 3,
-    "KlientId": 3,
+    "Id": 0,
+    "KlientId": 6,
     "Klient": null,
     "Waluta": "GBP",
     "Grafika": null,
@@ -36,8 +495,8 @@
     "Data": "0001-01-01T00:00:00"
   },
   {
-    "Id": 3,
-    "KlientId": 3,
+    "Id": 0,
+    "KlientId": 6,
     "Klient": null,
     "Waluta": "CHF",
     "Grafika": null,
@@ -45,8 +504,8 @@
     "Data": "0001-01-01T00:00:00"
   },
   {
-    "Id": 3,
-    "KlientId": 3,
+    "Id": 0,
+    "KlientId": 6,
     "Klient": null,
     "Waluta": "BTC",
     "Grafika": null,
@@ -54,57 +513,327 @@
     "Data": "0001-01-01T00:00:00"
   },
   {
-    "Id": 4,
-    "KlientId": 4,
+    "Id": 0,
+    "KlientId": 7,
     "Klient": null,
     "Waluta": "PLN",
     "Grafika": null,
-    "Kwota": 0.00,
+    "Kwota": 0.0,
     "Data": "0001-01-01T00:00:00"
   },
   {
-    "Id": 4,
-    "KlientId": 4,
+    "Id": 0,
+    "KlientId": 7,
     "Klient": null,
     "Waluta": "USD",
     "Grafika": null,
-    "Kwota": 0.00,
+    "Kwota": 0.0,
     "Data": "0001-01-01T00:00:00"
   },
   {
-    "Id": 4,
-    "KlientId": 4,
+    "Id": 0,
+    "KlientId": 7,
     "Klient": null,
     "Waluta": "EUR",
     "Grafika": null,
-    "Kwota": 0.00,
+    "Kwota": 0.0,
     "Data": "0001-01-01T00:00:00"
   },
   {
-    "Id": 4,
-    "KlientId": 4,
+    "Id": 0,
+    "KlientId": 7,
     "Klient": null,
     "Waluta": "GBP",
     "Grafika": null,
-    "Kwota": 0.00,
+    "Kwota": 0.0,
     "Data": "0001-01-01T00:00:00"
   },
   {
-    "Id": 4,
-    "KlientId": 4,
+    "Id": 0,
+    "KlientId": 7,
     "Klient": null,
     "Waluta": "CHF",
     "Grafika": null,
-    "Kwota": 0.00,
+    "Kwota": 0.0,
     "Data": "0001-01-01T00:00:00"
   },
   {
-    "Id": 4,
-    "KlientId": 4,
+    "Id": 0,
+    "KlientId": 7,
     "Klient": null,
     "Waluta": "BTC",
     "Grafika": null,
-    "Kwota": 0.00,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 8,
+    "Klient": null,
+    "Waluta": "PLN",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 8,
+    "Klient": null,
+    "Waluta": "USD",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 8,
+    "Klient": null,
+    "Waluta": "EUR",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 8,
+    "Klient": null,
+    "Waluta": "GBP",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 8,
+    "Klient": null,
+    "Waluta": "CHF",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 8,
+    "Klient": null,
+    "Waluta": "BTC",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 9,
+    "Klient": null,
+    "Waluta": "PLN",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 9,
+    "Klient": null,
+    "Waluta": "USD",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 9,
+    "Klient": null,
+    "Waluta": "EUR",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 9,
+    "Klient": null,
+    "Waluta": "GBP",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 9,
+    "Klient": null,
+    "Waluta": "CHF",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 9,
+    "Klient": null,
+    "Waluta": "BTC",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 10,
+    "Klient": null,
+    "Waluta": "PLN",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 10,
+    "Klient": null,
+    "Waluta": "USD",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 10,
+    "Klient": null,
+    "Waluta": "EUR",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 10,
+    "Klient": null,
+    "Waluta": "GBP",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 10,
+    "Klient": null,
+    "Waluta": "CHF",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 10,
+    "Klient": null,
+    "Waluta": "BTC",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 11,
+    "Klient": null,
+    "Waluta": "PLN",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 11,
+    "Klient": null,
+    "Waluta": "USD",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 11,
+    "Klient": null,
+    "Waluta": "EUR",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 11,
+    "Klient": null,
+    "Waluta": "GBP",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 11,
+    "Klient": null,
+    "Waluta": "CHF",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 11,
+    "Klient": null,
+    "Waluta": "BTC",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 12,
+    "Klient": null,
+    "Waluta": "PLN",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 12,
+    "Klient": null,
+    "Waluta": "USD",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 12,
+    "Klient": null,
+    "Waluta": "EUR",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 12,
+    "Klient": null,
+    "Waluta": "GBP",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 12,
+    "Klient": null,
+    "Waluta": "CHF",
+    "Grafika": null,
+    "Kwota": 0.0,
+    "Data": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 0,
+    "KlientId": 12,
+    "Klient": null,
+    "Waluta": "BTC",
+    "Grafika": null,
+    "Kwota": 0.0,
     "Data": "0001-01-01T00:00:00"
   }
 ]
