@@ -143,7 +143,10 @@ namespace KantorUI
 
                 label2.Text = $"Suma wartości walut w PLN: {sumaWPln.ToString("C2", CultureInfo.CurrentCulture)}";
 
-                comboBox4.DataSource = kursy;
+                comboBox4.DataSource = null;
+                var kursyZPustym = kursy.ToList();
+                kursyZPustym.Insert(0, new Kurs { Id = -1, Waluta = "" }); // Pusta wartość
+                comboBox4.DataSource = kursyZPustym;
                 comboBox4.DisplayMember = "Waluta";
                 comboBox4.ValueMember = "Id";
 
@@ -449,7 +452,7 @@ namespace KantorUI
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -477,32 +480,43 @@ namespace KantorUI
                 // Wczytanie danych konta klienta
                 string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
                 string filePathKonta = Path.Combine(projectDirectory, "KantorLibrary", "Data", "konta.json");
-                List<Konto> konta = LoadFromJson<List<Konto>>(filePathKonta);
-                var kontoKlienta = konta?.FirstOrDefault(k => k.KlientId == KlientId && k.Waluta == comboBox1.Text);
+                List<Konto> konta = await Task.Run(() => LoadFromJson<List<Konto>>(filePathKonta));
+                var kontoKlientaPLN = konta?.FirstOrDefault(k => k.KlientId == KlientId && k.Waluta == "PLN");
+                var kontoKlientaObce = konta?.FirstOrDefault(k => k.KlientId == KlientId && k.Waluta != "PLN");
+                string filePathKursy = Path.Combine(projectDirectory, "KantorLibrary", "Data", "kursy.json");
+                List<Kurs> kursy = await Task.Run(() => LoadFromJson<List<Kurs>>(filePathKursy));
 
-                if (kontoKlienta == null)
+                if (strona == 'K' && kontoKlientaPLN == null)
                 {
-                    MessageBox.Show("Nie znaleziono konta dla wybranej waluty.");
+                    MessageBox.Show("Nie znaleziono konta w walucie PLN.");
+                    return;
+                }
+
+                if (strona == 'S' && kontoKlientaObce == null)
+                {
+                    MessageBox.Show("Nie znaleziono konta w wybranej walucie obcej.");
                     return;
                 }
 
                 // Sprawdzenie, czy ilość nie przekracza dostępnych środków
-                if (ilosc > kontoKlienta.Kwota)
+                if (strona == 'K' && ilosc * kursy.First(k => k.Id == wybranyKursId).KursK > kontoKlientaPLN.Kwota)
                 {
-                    MessageBox.Show("Nie masz wystarczających środków na koncie do realizacji tej transakcji.");
+                    MessageBox.Show("Nie masz wystarczających środków w PLN do realizacji tej transakcji.");
+                    return;
+                }
+
+                if (strona == 'S' && ilosc > kontoKlientaObce.Kwota)
+                {
+                    MessageBox.Show("Nie masz wystarczających środków w walucie obcej do realizacji tej transakcji.");
                     return;
                 }
 
                 // Pobranie ostatniego ID transakcji
-                int lastTransactionId = GetLastTransactionId();
+                int lastTransactionId = await Task.Run(() => GetLastTransactionId());
                 int newTransactionId = lastTransactionId + 1;
-                SaveLastTransactionId(newTransactionId);
+                await Task.Run(() => SaveLastTransactionId(newTransactionId));
 
                 // Wczytanie kursu
-                string filePathKursy = Path.Combine(projectDirectory, "KantorLibrary", "Data", "kursy.json");
-                List<Kurs> kursy = LoadFromJson<List<Kurs>>(filePathKursy);
-
-                // Sprawdzanie poprawności kursu
                 Kurs wybranyKurs = kursy?.FirstOrDefault(k => k.Id == wybranyKursId);
                 if (wybranyKurs == null)
                 {
@@ -536,13 +550,28 @@ namespace KantorUI
                 };
 
                 ZamowienieService zamowienieService = new ZamowienieService(filePathZamowienia);
-                zamowienieService.Add(zamowienie);
+                await Task.Run(() => zamowienieService.Add(zamowienie));
+
+                // Aktualizacja salda
+                if (strona == 'K')
+                {
+                    kontoKlientaPLN.Kwota -= transakcjaWartosc;
+                }
+                else if (strona == 'S')
+                {
+                    kontoKlientaObce.Kwota -= ilosc;
+                    kontoKlientaPLN.Kwota += transakcjaWartosc;
+                }
+
+                await Task.Run(() => SaveToJson(filePathKonta, konta));
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Błąd podczas przetwarzania transakcji: {ex.Message}");
             }
         }
+
+
 
 
         private void button2_Click(object sender, EventArgs e)
