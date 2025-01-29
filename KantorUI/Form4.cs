@@ -556,6 +556,21 @@ namespace KantorUI
                 if (strona == 'K')
                 {
                     kontoKlientaPLN.Kwota -= transakcjaWartosc;
+                    var kontoWalutaObca = konta.FirstOrDefault(k => k.KlientId == KlientId && k.Waluta == wybranyKurs.Waluta);
+                    if (kontoWalutaObca == null)
+                    {
+                        kontoWalutaObca = new Konto
+                        {
+                            KlientId = KlientId,
+                            Waluta = wybranyKurs.Waluta,
+                            Kwota = ilosc
+                        };
+                        konta.Add(kontoWalutaObca);
+                    }
+                    else
+                    {
+                        kontoWalutaObca.Kwota += ilosc;
+                    }
                 }
                 else if (strona == 'S')
                 {
@@ -564,6 +579,8 @@ namespace KantorUI
                 }
 
                 await Task.Run(() => SaveToJson(filePathKonta, konta));
+
+                WyswietlZamowienia();
             }
             catch (Exception ex)
             {
@@ -609,8 +626,9 @@ namespace KantorUI
                 //    (strona == "Kupno" && z.Strona == 'K' || strona == "Sprzedaż" && z.Strona == 'S')
                 //);
                 //Kurs kurs = kursy.FirstOrDefault(k => k.Id == walutaObj.Id);
+
                 var filteredZamowienia = zamowienia
-                    .Where(z => z.KursId == walutaObj.Id)
+                    .Where(z => walutaObj.Id == -1 || z.KursId == walutaObj.Id) // Jeśli walutaObj.Id == -1, pomija filtrowanie po KursId
                     .Where(z => z.Strona == strona[0])
                     .Where(z => z.Data.Date >= dataOd.Date)
                     .Where(z => z.Data.Date <= dataDo.Date)
@@ -671,42 +689,57 @@ namespace KantorUI
                 }
 
                 // Zamiana z IOrderedEnumerable na List<Zamowienie>
-                var sortedZamowieniaList = sortedZamowienia.ToList();
+                List<Zamowienie> sortedZamowieniaList = sortedZamowienia.ToList();
 
-                // Wyświetlanie posortowanych i przefiltrowanych danych w ListView
-                listView2.Items.Clear();
-                foreach (var zamowienie in sortedZamowieniaList)
-                {
-                    var kurs = this.kursy.FirstOrDefault(k => k.Id == zamowienie.KursId);
-                    var lokalizacja = lokalizacje.FirstOrDefault(l => l.Id == zamowienie.LokalizacjaId);
-                    var adres = adresy.FirstOrDefault(a => a.Id == zamowienie.AdresId);
-
-                    if (kurs != null && lokalizacja != null && adres != null)
-                    {
-                        ListViewItem item = new ListViewItem(kurs.Waluta);
-                        item.SubItems.Add(zamowienie.Ilosc.ToString());
-                        item.SubItems.Add(zamowienie.Wartosc.ToString("F2", CultureInfo.InvariantCulture));
-                        item.SubItems.Add($"{lokalizacja.Miasto} {lokalizacja.KodKraju}");
-                        item.SubItems.Add(adres.PelnyAdres);
-                        item.SubItems.Add(zamowienie.Strona == 'K' ? "Kupno" : "Sprzedaż");
-
-                        listView2.Items.Add(item);
-                    }
-                }
+                WyswietlZamowienia(sortedZamowieniaList);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Błąd podczas filtrowania i sortowania danych: {ex.Message}");
             }
         }
+        /// <summary>
+        /// Wyświetla zamówienia w kontrolce ListView. 
+        /// Jeśli przekazano listę zamówień jako parametr, metoda wykorzystuje ją do generowania widoku. 
+        /// W przeciwnym razie używa domyślnej listy `this.zamowienia`.
+        /// </summary>
+        /// <param name="zamowieniaList">
+        /// Opcjonalna lista zamówień (`List<Zamowienie>`). Jeśli `null`, metoda użyje `this.zamowienia`.
+        /// </param>
+        public void WyswietlZamowienia(List<Zamowienie> zamowieniaList = null)
+        {
+            string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+            string filePathZamowienia = Path.Combine(projectDirectory, "KantorLibrary", "Data", "zamowienia.json");
+            var zamowienia = LoadFromJson<List<Zamowienie>>(filePathZamowienia);
 
+            this.zamowienia = zamowienia;
+            // Użyj przekazanej listy lub domyślnej this.zamowienia
+            var listaZamowien = (zamowieniaList ?? this.zamowienia)
+                        .Where(z => z.KlientId == this.KlientId)
+                        .ToList();
 
+            // Wyczyszczenie ListView
+            listView2.Items.Clear();
 
+            // Iteracja po zamówieniach i dodawanie ich do ListView
+            foreach (var zamowienie in listaZamowien)
+            {
+                var kurs = this.kursy.FirstOrDefault(k => k.Id == zamowienie.KursId);
+                var lokalizacja = lokalizacje.FirstOrDefault(l => l.Id == zamowienie.LokalizacjaId);
+                var adres = adresy.FirstOrDefault(a => a.Id == zamowienie.AdresId);
 
+                if (kurs != null && lokalizacja != null && adres != null)
+                {
+                    ListViewItem item = new ListViewItem(kurs.Waluta);
+                    item.SubItems.Add(zamowienie.Ilosc.ToString());
+                    item.SubItems.Add(zamowienie.Wartosc.ToString("F2", CultureInfo.InvariantCulture));
+                    item.SubItems.Add($"{lokalizacja.Miasto} {lokalizacja.KodKraju}");
+                    item.SubItems.Add(adres.PelnyAdres);
+                    item.SubItems.Add(zamowienie.Strona == 'K' ? "Kupno" : "Sprzedaż");
 
-
-
-
-
+                    listView2.Items.Add(item);
+                }
+            }
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace KantorUI
 
         // Ścieżka do pliku, który przechowuje ostatni użyty ID
         private string idFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "lastClientId.txt");
+        private string accountIdFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "lastAccountId.txt");
 
         public Form2()
         {
@@ -51,6 +52,39 @@ namespace KantorUI
             catch (Exception ex)
             {
                 MessageBox.Show($"Błąd przy zapisie ostatniego ID: {ex.Message}");
+            }
+        }
+
+        private int GetLastAccountId()
+        {
+            try
+            {
+                if (File.Exists(accountIdFilePath))
+                {
+                    string lastIdStr = File.ReadAllText(accountIdFilePath);
+                    if (int.TryParse(lastIdStr, out int lastId))
+                    {
+                        return lastId;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Błąd przy odczycie ostatniego ID konta: {ex.Message}");
+            }
+            return 0;
+        }
+
+        // Zapisz nowe ostatnie ID konta
+        private void SaveLastAccountId(int id)
+        {
+            try
+            {
+                File.WriteAllText(accountIdFilePath, id.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Błąd przy zapisie ostatniego ID konta: {ex.Message}");
             }
         }
 
@@ -158,11 +192,15 @@ namespace KantorUI
                     konta = JsonSerializer.Deserialize<List<Konto>>(jsonContent) ?? new List<Konto>();
                 }
 
+                int lastAccountId = GetLastAccountId();
+
                 // Tworzenie kont walutowych dla klienta
                 foreach (var waluta in currencies)
                 {
+                    lastAccountId++;
                     Konto konto = new Konto
                     {
+                        Id = lastAccountId,
                         KlientId = clientId,
                         Waluta = waluta,
                         Kwota = 0.0m  // Na początek saldo wynosi 0
@@ -170,6 +208,8 @@ namespace KantorUI
 
                     konta.Add(konto);
                 }
+
+                SaveLastAccountId(lastAccountId);
 
                 // Zapisanie zaktualizowanej listy kont do pliku
                 string updatedJsonContent = JsonSerializer.Serialize(konta, new JsonSerializerOptions { WriteIndented = true });
