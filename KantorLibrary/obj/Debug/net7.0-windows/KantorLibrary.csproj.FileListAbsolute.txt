@@ -22,3 +22,15 @@ C:\Users\Piotr\Downloads\kantor-main (1)\kantor-main\KantorLibrary\obj\Debug\net
 C:\Users\Piotr\Downloads\kantor-main (1)\kantor-main\KantorLibrary\obj\Debug\net7.0-windows\refint\KantorLibrary.dll
 C:\Users\Piotr\Downloads\kantor-main (1)\kantor-main\KantorLibrary\obj\Debug\net7.0-windows\KantorLibrary.pdb
 C:\Users\Piotr\Downloads\kantor-main (1)\kantor-main\KantorLibrary\obj\Debug\net7.0-windows\ref\KantorLibrary.dll
+C:\Users\liczn\Downloads\kantor-main (2)\kantor-main\KantorLibrary\bin\Debug\net7.0-windows\KantorLibrary.deps.json
+C:\Users\liczn\Downloads\kantor-main (2)\kantor-main\KantorLibrary\bin\Debug\net7.0-windows\KantorLibrary.dll
+C:\Users\liczn\Downloads\kantor-main (2)\kantor-main\KantorLibrary\bin\Debug\net7.0-windows\KantorLibrary.pdb
+C:\Users\liczn\Downloads\kantor-main (2)\kantor-main\KantorLibrary\obj\Debug\net7.0-windows\KantorLibrary.csproj.AssemblyReference.cache
+C:\Users\liczn\Downloads\kantor-main (2)\kantor-main\KantorLibrary\obj\Debug\net7.0-windows\KantorLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\liczn\Downloads\kantor-main (2)\kantor-main\KantorLibrary\obj\Debug\net7.0-windows\KantorLibrary.AssemblyInfoInputs.cache
+C:\Users\liczn\Downloads\kantor-main (2)\kantor-main\KantorLibrary\obj\Debug\net7.0-windows\KantorLibrary.AssemblyInfo.cs
+C:\Users\liczn\Downloads\kantor-main (2)\kantor-main\KantorLibrary\obj\Debug\net7.0-windows\KantorLibrary.csproj.CoreCompileInputs.cache
+C:\Users\liczn\Downloads\kantor-main (2)\kantor-main\KantorLibrary\obj\Debug\net7.0-windows\KantorLibrary.dll
+C:\Users\liczn\Downloads\kantor-main (2)\kantor-main\KantorLibrary\obj\Debug\net7.0-windows\refint\KantorLibrary.dll
+C:\Users\liczn\Downloads\kantor-main (2)\kantor-main\KantorLibrary\obj\Debug\net7.0-windows\KantorLibrary.pdb
+C:\Users\liczn\Downloads\kantor-main (2)\kantor-main\KantorLibrary\obj\Debug\net7.0-windows\ref\KantorLibrary.dll
