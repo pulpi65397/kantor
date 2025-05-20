@@ -1,118 +1,19 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\",
+  "WorkspaceRootPath": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorui\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorui\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form4.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\data\\zamowienia.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\zamowienia.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\data\\lokalizacje.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\lokalizacje.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\data\\kursy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\kursy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\models\\zamowienie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorlibrary\\models\\zamowienie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:models\\zamowienie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\data\\konta.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\konta.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\data\\klienci.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\klienci.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\models\\lokalizacja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:models\\lokalizacja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\data\\adresy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\adresy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\models\\adres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:models\\adres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\models\\kurs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:models\\kurs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\models\\klient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:models\\klient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\models\\konto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:models\\konto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\repositories\\jsonrepozytorium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:repositories\\jsonrepozytorium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\interfaces\\izamowienieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:interfaces\\izamowienieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\interfaces\\iklientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:interfaces\\iklientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|c:\\users\\liczn\\downloads\\kantor-main (2)\\kantor-main\\kantorlibrary\\services\\zamowienieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:services\\zamowienieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\kantorui\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\kantorui\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\kantorui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form5.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\kantorui\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\kantorui\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -122,385 +23,78 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form4.cs",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorUI\\Form4.cs",
+              "DocumentIndex": 2,
+              "Title": "Form4.cs [Projekt]",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form4.cs",
               "RelativeDocumentMoniker": "..\\KantorUI\\Form4.cs",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorUI\\Form4.cs",
-              "RelativeToolTip": "..\\KantorUI\\Form4.cs",
-              "ViewState": "AgIAALECAAAAAAAAAAAuwLcCAAB8AAAAAAAAAA==",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form4.cs [Projekt]",
+              "RelativeToolTip": "..\\KantorUI\\Form4.cs [Projekt]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T17:12:33.977Z",
+              "WhenOpened": "2025-05-20T17:23:25.729Z",
+              "EditorCaption": " [Projekt]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Zamowienie.cs",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Models\\Zamowienie.cs",
+              "RelativeDocumentMoniker": "Models\\Zamowienie.cs",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Models\\Zamowienie.cs",
+              "RelativeToolTip": "Models\\Zamowienie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T17:07:04.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form4.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorUI\\Form4.cs",
-              "RelativeDocumentMoniker": "..\\KantorUI\\Form4.cs",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorUI\\Form4.cs [Design]",
-              "RelativeToolTip": "..\\KantorUI\\Form4.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T17:12:24.772Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "kursy.json",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Data\\kursy.json",
-              "RelativeDocumentMoniker": "Data\\kursy.json",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Data\\kursy.json",
-              "RelativeToolTip": "Data\\kursy.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-19T18:15:12.726Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "lokalizacje.json",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Data\\lokalizacje.json",
-              "RelativeDocumentMoniker": "Data\\lokalizacje.json",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Data\\lokalizacje.json",
-              "RelativeToolTip": "Data\\lokalizacje.json",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-19T18:15:12.727Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "Form4.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.Designer.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.Designer.cs",
-              "ToolTip": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.Designer.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form4.Designer.cs",
+              "RelativeDocumentMoniker": "..\\KantorUI\\Form4.Designer.cs",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form4.Designer.cs",
+              "RelativeToolTip": "..\\KantorUI\\Form4.Designer.cs",
+              "ViewState": "AgIAAEYBAAAAAAAAAADgv0wBAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:12.729Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Form3.cs",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form3.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form3.cs",
-              "ToolTip": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form3.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form3.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:12.73Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Form4.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.cs",
-              "ToolTip": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Zamowienie.cs",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Models\\Zamowienie.cs",
-              "RelativeDocumentMoniker": "Models\\Zamowienie.cs",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Models\\Zamowienie.cs",
-              "RelativeToolTip": "Models\\Zamowienie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.013Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "zamowienia.json",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Data\\zamowienia.json",
-              "RelativeDocumentMoniker": "Data\\zamowienia.json",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Data\\zamowienia.json",
-              "RelativeToolTip": "Data\\zamowienia.json",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAIwKcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-19T18:15:13.016Z",
+              "WhenOpened": "2025-05-20T15:48:20.031Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "konta.json",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Data\\konta.json",
-              "RelativeDocumentMoniker": "Data\\konta.json",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Data\\konta.json",
-              "RelativeToolTip": "Data\\konta.json",
-              "ViewState": "AQIAAOYBAAAAAAAAAAAkwP0BAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-19T18:15:12.724Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Program.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Program.cs",
-              "ToolTip": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Program.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.026Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 0,
               "Title": "Form4.cs",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.cs",
-              "ToolTip": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form4.cs",
-              "ViewState": "AgIAAEsBAAAAAAAAAAAEwGIBAAAQAAAAAAAAAA==",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form4.cs",
+              "RelativeDocumentMoniker": "..\\KantorUI\\Form4.cs",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form4.cs",
+              "RelativeToolTip": "..\\KantorUI\\Form4.cs",
+              "ViewState": "AgIAAHgCAAAAAAAAAAAUwIoCAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:12.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "klienci.json",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Data\\klienci.json",
-              "RelativeDocumentMoniker": "Data\\klienci.json",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Data\\klienci.json",
-              "RelativeToolTip": "Data\\klienci.json",
-              "ViewState": "AQIAAKsBAAAAAAAAAAAAAAcCAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-19T18:15:12.723Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Adres.cs",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Models\\Adres.cs",
-              "RelativeDocumentMoniker": "Models\\Adres.cs",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Models\\Adres.cs",
-              "RelativeToolTip": "Models\\Adres.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:12.721Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Lokalizacja.cs",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Models\\Lokalizacja.cs",
-              "RelativeDocumentMoniker": "Models\\Lokalizacja.cs",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Models\\Lokalizacja.cs",
-              "RelativeToolTip": "Models\\Lokalizacja.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.015Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "adresy.json",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Data\\adresy.json",
-              "RelativeDocumentMoniker": "Data\\adresy.json",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Data\\adresy.json",
-              "RelativeToolTip": "Data\\adresy.json",
-              "ViewState": "AQIAAHkAAAAAAAAAAAAkwIkAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-19T18:15:13.018Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Klient.cs",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Models\\Klient.cs",
-              "RelativeDocumentMoniker": "Models\\Klient.cs",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Models\\Klient.cs",
-              "RelativeToolTip": "Models\\Klient.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.019Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Konto.cs",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Models\\Konto.cs",
-              "RelativeDocumentMoniker": "Models\\Konto.cs",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Models\\Konto.cs",
-              "RelativeToolTip": "Models\\Konto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.021Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Kurs.cs",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Models\\Kurs.cs",
-              "RelativeDocumentMoniker": "Models\\Kurs.cs",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Models\\Kurs.cs",
-              "RelativeToolTip": "Models\\Kurs.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.022Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Form5.cs [Projekt]",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form5.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form5.cs",
-              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form5.cs [Projekt]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2025-01-19T18:15:13.023Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form1.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form1.cs",
-              "ToolTip": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form1.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form1.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.024Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Form5.cs",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form5.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form5.cs",
-              "ToolTip": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form5.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form5.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.027Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "JsonRepozytorium.cs",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Repositories\\JsonRepozytorium.cs",
-              "RelativeDocumentMoniker": "Repositories\\JsonRepozytorium.cs",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Repositories\\JsonRepozytorium.cs",
-              "RelativeToolTip": "Repositories\\JsonRepozytorium.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.029Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Form2.cs",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form2.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form2.cs",
-              "ToolTip": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form2.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form2.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.031Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form1.Designer.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form1.Designer.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAAAF0AAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.032Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Form1.cs [Projekt]",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form1.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form1.cs",
-              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form1.cs [Projekt]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2025-01-19T18:15:13.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IZamowienieService.cs",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Interfaces\\IZamowienieService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IZamowienieService.cs",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Interfaces\\IZamowienieService.cs",
-              "RelativeToolTip": "Interfaces\\IZamowienieService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.042Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Form5.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form5.Designer.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form5.Designer.cs",
-              "ToolTip": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form5.Designer.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form5.Designer.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Form2.cs [Projekt]",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form2.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form2.cs",
-              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form2.cs [Projekt]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2025-01-19T18:15:13.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IKlientService.cs",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Interfaces\\IKlientService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IKlientService.cs",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Interfaces\\IKlientService.cs",
-              "RelativeToolTip": "Interfaces\\IKlientService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.05Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Form3.cs [Projekt]",
-              "DocumentMoniker": "C:\\Users\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form3.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Piotr\\Downloads\\kantor-main (1)\\kantor-main\\KantorUI\\Form3.cs",
-              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form3.cs [Projekt]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2025-01-19T18:15:13.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ZamowienieService.cs",
-              "DocumentMoniker": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Services\\ZamowienieService.cs",
-              "RelativeDocumentMoniker": "Services\\ZamowienieService.cs",
-              "ToolTip": "C:\\Users\\liczn\\Downloads\\kantor-main (2)\\kantor-main\\KantorLibrary\\Services\\ZamowienieService.cs",
-              "RelativeToolTip": "Services\\ZamowienieService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAqwEoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T18:15:13.056Z"
+              "WhenOpened": "2025-05-08T15:54:05.189Z",
+              "EditorCaption": ""
             }
           ]
         }

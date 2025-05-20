@@ -814,5 +814,21 @@
     "Strona": "K",
     "AdresId": 1,
     "Adres": null
+  },
+  {
+    "Id": 11,
+    "Data": "2025-05-20T17:40:08.4457071+02:00",
+    "KlientId": 6,
+    "Klient": null,
+    "Ilosc": 1,
+    "Wartosc": 4.4381,
+    "LokalizacjaId": 1,
+    "Lokalizacja": null,
+    "KursId": 1,
+    "Kurs": null,
+    "CenaKursu": 4.4381,
+    "Strona": "K",
+    "AdresId": 1,
+    "Adres": null
   }
 ]

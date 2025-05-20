@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("KantorUI")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("KantorLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb134c48ffdee3d55a9bba156118e31cd2944327")]
-[assembly: System.Reflection.AssemblyProductAttribute("KantorUI")]
-[assembly: System.Reflection.AssemblyTitleAttribute("KantorUI")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+261dc92b881c454c1d5e2e3af042bb1c59e89a8c")]
+[assembly: System.Reflection.AssemblyProductAttribute("KantorLibrary")]
+[assembly: System.Reflection.AssemblyTitleAttribute("KantorLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

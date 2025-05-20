@@ -100,9 +100,20 @@ namespace KantorUI
                 comboBox2.DisplayMember = "Kantor";
                 comboBox2.ValueMember = "Id";
 
-                comboBox3.DataSource = adresy;
-                comboBox3.DisplayMember = "PelnyAdres";
-                comboBox3.ValueMember = "Id";
+                // Pobranie adresów dla wybranego klienta
+                var adresyDlaKlienta = adresy.Where(a => a.KlientId == KlientId).ToList();
+
+                if (adresyDlaKlienta.Count == 0)
+                {
+                    MessageBox.Show("Brak adresów przypisanych do wskazanego klienta.");
+                    comboBox3.DataSource = null; // Ustawienie pustego źródła danych
+                }
+                else
+                {
+                    comboBox3.DataSource = adresyDlaKlienta;
+                    comboBox3.DisplayMember = "PelnyAdres"; // Kolumna z pełnym adresem
+                    comboBox3.ValueMember = "Id"; // Identyfikator adresu
+                }
 
                 var kontaDlaKlienta = konta.Where(k => k.KlientId == KlientId).ToList();
 
@@ -152,10 +163,11 @@ namespace KantorUI
 
                 var strony = zamowienia.Select(z => z.Strona).Distinct().ToList();
 
-                // Zamiana 'K' na "Kupno" i 'S' na "Sprzedaż"
-                var stronyOpisowe = strony.Select(strona =>
+                // Zamiana 'K' na "Kupno" i 'S' na "Sprzedaż" + opcja neutralna
+                var stronyOpisowe = new List<string> { "" }; // Dodajemy opcję neutralną
+                stronyOpisowe.AddRange(strony.Select(strona =>
                     strona == 'K' ? "Kupno" :
-                    (strona == 'S' ? "Sprzedaż" : "Nieznane")).ToList();
+                    (strona == 'S' ? "Sprzedaż" : "Nieznane")));
 
                 // Ustawienie źródła danych w ComboBox
                 comboBox5.DataSource = stronyOpisowe;
@@ -179,6 +191,7 @@ namespace KantorUI
                 // Wyświetlenie złożonych zamówień w ListView2
                 listView2.Items.Clear();
                 listView2.Columns.Clear();
+                listView2.Columns.Add("Data zamówienia", 125);
                 listView2.Columns.Add("Waluta");
                 listView2.Columns.Add("Ilość");
                 listView2.Columns.Add("Wartość");
@@ -199,7 +212,8 @@ namespace KantorUI
 
                     if (kurs != null && lokalizacja != null && adres != null)
                     {
-                        ListViewItem item = new ListViewItem(kurs.Waluta);
+                        ListViewItem item = new ListViewItem(zamowienie.Data.ToString("yyyy-MM-dd"));
+                        item.SubItems.Add(kurs.Waluta);
                         item.SubItems.Add(zamowienie.Ilosc.ToString());
                         item.SubItems.Add(zamowienie.Wartosc.ToString("F2", CultureInfo.InvariantCulture));
 
@@ -629,7 +643,7 @@ namespace KantorUI
 
                 var walutaObj = (Kurs)comboBox4.SelectedItem;
                 string waluta = walutaObj.Waluta;
-                string strona = comboBox5.SelectedValue.ToString();
+                string strona = comboBox5.SelectedItem?.ToString() ?? "";
 
                 // Sprawdzenie, czy daty są poprawnie ustawione
                 if (dataOd == null || dataDo == null)
@@ -637,22 +651,11 @@ namespace KantorUI
                     MessageBox.Show("Proszę wybrać zakres dat.");
                     return;
                 }
-
-                // Jeśli waluta lub strona są puste, ustaw domyślne wartości
-                if (string.IsNullOrEmpty(waluta)) waluta = "USD";  // Przykład domyślnej waluty
-                if (string.IsNullOrEmpty(strona)) strona = "Kupno";  // Przykład domyślnej strony
-
-                // Filtracja danych
-                //var filteredZamowienia = zamowienia.Where(z =>
-                //    z.Data >= dataOd && z.Data <= dataDo &&
-                //    (string.IsNullOrEmpty(waluta) || z.Kurs.Waluta == waluta) &&
-                //    (strona == "Kupno" && z.Strona == 'K' || strona == "Sprzedaż" && z.Strona == 'S')
-                //);
-                //Kurs kurs = kursy.FirstOrDefault(k => k.Id == walutaObj.Id);
-
+               
                 var filteredZamowienia = zamowienia
-                    .Where(z => walutaObj.Id == -1 || z.KursId == walutaObj.Id) // Jeśli walutaObj.Id == -1, pomija filtrowanie po KursId
-                    .Where(z => z.Strona == strona[0])
+                    .Where(z => walutaObj.Id == -1 || z.KursId == walutaObj.Id)
+                    // Jeśli wybrano "Wszystkie", pomiń filtr strony
+                    .Where(z => strona == "" || z.Strona == strona[0])
                     .Where(z => z.Data.Date >= dataOd.Date)
                     .Where(z => z.Data.Date <= dataDo.Date)
                     .ToList();
@@ -753,7 +756,8 @@ namespace KantorUI
 
                 if (kurs != null && lokalizacja != null && adres != null)
                 {
-                    ListViewItem item = new ListViewItem(kurs.Waluta);
+                    ListViewItem item = new ListViewItem(zamowienie.Data.ToString("yyyy-MM-dd"));
+                    item.SubItems.Add(kurs.Waluta);
                     item.SubItems.Add(zamowienie.Ilosc.ToString());
                     item.SubItems.Add(zamowienie.Wartosc.ToString("F2", CultureInfo.InvariantCulture));
                     item.SubItems.Add($"{lokalizacja.Miasto} {lokalizacja.KodKraju}");
@@ -763,6 +767,223 @@ namespace KantorUI
                     listView2.Items.Add(item);
                 }
             }
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ShowAddAdresForm();
+        }
+
+        private void ShowAddAdresForm()
+        {
+            // Tworzenie formularza dodawania środków
+            Form addAdresForm = new Form
+            {
+                Text = "Formularz dodawania adresu:",
+                Size = new Size(300, 300)
+            };
+
+            Label streetLabel = new Label
+            {
+                Text = "Ulica:",
+                Location = new Point(10, 10)
+            };
+
+            TextBox streetTextBox = new TextBox
+            {
+                Location = new Point(150, 10),
+                Width = 100
+            };
+
+            Label homeNumberLabel = new Label
+            {
+                Text = "Numer domu:",
+                Location = new Point(10, 50)
+            };
+
+            TextBox homeNumberTextBox = new TextBox
+            {
+                Location = new Point(150, 50),
+                Width = 100
+            };
+
+            Label flatNumberLabel = new Label
+            {
+                Text = "Nr mieszkania:",
+                Location = new Point(10, 80)
+            };
+
+            TextBox flatNumberTextBox = new TextBox
+            {
+                Location = new Point(150, 80),
+                Width = 100
+            };
+
+            Label postCodeLabel = new Label
+            {
+                Text = "Kod pocztowy:",
+                Location = new Point(10, 110)
+            };
+
+            TextBox postCodeTextBox = new TextBox
+            {
+                Location = new Point(150, 110),
+                Width = 100
+            };
+
+            Label cityLabel = new Label
+            {
+                Text = "Miasto:",
+                Location = new Point(10, 140)
+            };
+
+            TextBox cityTextBox = new TextBox
+            {
+                Location = new Point(150, 140),
+                Width = 100
+            };
+
+            Label addressTypeLabel = new Label
+            {
+                Text = "Typ adresu:",
+                Location = new Point(10, 170)
+            };
+
+            var typAdresu = new List<string>
+    {
+        "Adres zamieszkania",
+        "Adres korespondencyjny",
+        "Adres firmy"
+    };
+
+            ComboBox addressTypeComboBox = new ComboBox
+            {
+                Location = new Point(150, 170),
+                Width = 120
+            };
+
+            addressTypeComboBox.Items.AddRange(typAdresu.ToArray());
+
+            Button addButton = new Button
+            {
+                Text = "Dodaj",
+                Location = new Point(10, 200)
+            };
+
+            addButton.Click += (sender, args) =>
+            {
+                string street = streetTextBox.Text.Trim();
+                if (string.IsNullOrEmpty(street))
+                {
+                    MessageBox.Show("Proszę podać ulicę.");
+                    return;
+                }
+
+                string homeNumber = homeNumberTextBox.Text.Trim();
+                if (string.IsNullOrEmpty(homeNumber))
+                {
+                    MessageBox.Show("Proszę podać numer domu.");
+                    return;
+                }
+
+                int flatNumber;
+                if (!int.TryParse(flatNumberTextBox.Text, out flatNumber))
+                {
+                    MessageBox.Show("Nieprawidłowy format numeru mieszkania. Wprowadź liczbę całkowitą.");
+                    return;
+                }
+
+                string postCode = postCodeTextBox.Text.Trim();
+                if (string.IsNullOrEmpty(postCode))
+                {
+                    MessageBox.Show("Proszę podać kod pocztowy.");
+                    return;
+                }
+
+                string city = cityTextBox.Text.Trim();
+                if (string.IsNullOrEmpty(city))
+                {
+                    MessageBox.Show("Proszę podać miasto.");
+                    return;
+                }
+
+                string addressType = addressTypeComboBox.SelectedItem?.ToString();
+
+                Adres newAddress = new Adres
+                {
+                    KlientId = KlientId,
+                    Ulica = street,
+                    NrDomu = homeNumber,
+                    NrMieszkania = flatNumber,
+                    KodPocztowy = postCode,
+                    Miasto = city,
+                    TypAdresu = addressType
+                };
+
+                adresy.Add(newAddress);
+
+                int newAddressId = adresy.Max(a => a.Id) + 1;
+                newAddress.Id = newAddressId;
+
+                string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+                string filePathAdresy = Path.Combine(projectDirectory, "KantorLibrary", "Data", "adresy.json");
+                List<Adres> existingAddresses = LoadFromJson<List<Adres>>(filePathAdresy);
+                existingAddresses.Add(newAddress);
+                SaveToJson(filePathAdresy, existingAddresses);
+
+                comboBox3.DataSource = null;
+                comboBox3.DataSource = adresy.Where(a => a.KlientId == KlientId).ToList();
+                comboBox3.DisplayMember = "PelnyAdres";
+                comboBox3.ValueMember = "Id";
+
+                addAdresForm.Close();
+
+                MessageBox.Show("Adres został dodany pomyślnie.");
+            };
+
+            addAdresForm.Controls.Add(streetLabel);
+            addAdresForm.Controls.Add(streetTextBox);
+            addAdresForm.Controls.Add(homeNumberLabel);
+            addAdresForm.Controls.Add(homeNumberTextBox);
+            addAdresForm.Controls.Add(flatNumberLabel);
+            addAdresForm.Controls.Add(flatNumberTextBox);
+            addAdresForm.Controls.Add(postCodeLabel);
+            addAdresForm.Controls.Add(postCodeTextBox);
+            addAdresForm.Controls.Add(cityLabel);
+            addAdresForm.Controls.Add(cityTextBox);
+            addAdresForm.Controls.Add(addressTypeLabel);
+            addAdresForm.Controls.Add(addressTypeComboBox);
+            addAdresForm.Controls.Add(addButton);
+            addAdresForm.ShowDialog();
+        }
+
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (comboBox3.SelectedIndex == -1)
+            {
+                MessageBox.Show("Proszę wybrać adres do usunięcia.");
+                return;
+            }
+
+            int selectedAddressId = (int)comboBox3.SelectedValue;
+
+            Adres addressToRemove = adresy.FirstOrDefault(a => a.Id == selectedAddressId);
+            adresy.Remove(addressToRemove);
+
+            comboBox3.DataSource = null;
+            comboBox3.DataSource = adresy.Where(a => a.KlientId == KlientId).ToList();
+
+            string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+            string filePathAdresy = Path.Combine(projectDirectory, "KantorLibrary", "Data", "adresy.json");
+            SaveToJson(filePathAdresy, adresy);
+            MessageBox.Show("Adres został usunięty.");
+
+            comboBox3.DataSource = null;
+            comboBox3.DataSource = adresy.Where(a => a.KlientId == KlientId).ToList();
+            comboBox3.DisplayMember = "PelnyAdres";
+            comboBox3.ValueMember = "Id";
+
         }
     }
 }

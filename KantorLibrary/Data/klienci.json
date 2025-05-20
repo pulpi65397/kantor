@@ -583,5 +583,20 @@
     "Typ": "K",
     "Data": "2025-01-29T20:45:31.3688644+01:00",
     "Adresy": null
+  },
+  {
+    "Id": 8,
+    "Login": "user",
+    "Haslo": "user",
+    "Imie": "user",
+    "Nazwisko": "user",
+    "NazwaFirmy": "user",
+    "NIP": "user",
+    "Telefon": "user",
+    "Email": "user",
+    "Avatar": null,
+    "Typ": "K",
+    "Data": "2025-05-08T17:16:05.0405177+02:00",
+    "Adresy": null
   }
 ]
