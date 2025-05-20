@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net7.0-windows7.0": {
+    "net9.0-windows7.0": {
       "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
@@ -17,7 +17,7 @@
       },
       "KantorLibrary/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"
         },
@@ -68,7 +68,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net7.0-windows7.0": [
+    "net9.0-windows7.0": [
       "KantorLibrary >= 1.0.0"
     ]
   },
@@ -94,15 +94,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0-windows"
+        "net9.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0-windows7.0": {
-          "targetAlias": "net7.0-windows",
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
           "projectReferences": {
             "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\KantorLibrary.csproj": {
               "projectPath": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\KantorLibrary.csproj"
@@ -114,11 +114,17 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
-      "net7.0-windows7.0": {
-        "targetAlias": "net7.0-windows",
+      "net9.0-windows7.0": {
+        "targetAlias": "net9.0-windows",
         "imports": [
           "net461",
           "net462",
@@ -138,7 +144,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

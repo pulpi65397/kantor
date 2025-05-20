@@ -401,19 +401,42 @@ namespace KantorUI
             subFundsForm.ShowDialog();
         }
 
-        public void UpdateKontaListView(List<Konto> konta, int klientId)
+        public async void UpdateKontaListView(List<Konto> konta, int klientId)
         {
-            listView1.Items.Clear();
-            var kontaDlaKlienta = konta.Where(k => k.KlientId == klientId).ToList();
-
-            foreach (var konto in kontaDlaKlienta)
+            try
             {
-                var item = new ListViewItem(new[]
+                // 1. Ponownie wczytaj kursy walut (aby mieć aktualne dane)
+                string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
+                string filePathKursy = Path.Combine(projectDirectory, "KantorLibrary", "Data", "kursy.json");
+                this.kursy = await Task.Run(() => LoadFromJson<List<Kurs>>(filePathKursy));
+
+                // 2. Aktualizuj listę kont na formularzu
+                listView1.Items.Clear();
+                var kontaDlaKlienta = konta.Where(k => k.KlientId == klientId).ToList();
+
+                foreach (var konto in kontaDlaKlienta)
                 {
-                    konto.Waluta,
-                    konto.Kwota.ToString("F2", CultureInfo.InvariantCulture),
-                });
-                listView1.Items.Add(item);
+                    ListViewItem item = new ListViewItem
+                    {
+                        Text = konto.Waluta
+                    };
+                    item.SubItems.Add(konto.Kwota.ToString("F2", CultureInfo.InvariantCulture));
+                    listView1.Items.Add(item);
+                    AddAddButton(item, konto);
+                    AddSubButton(item, konto);
+                }
+
+                // 3. Przelicz sumę z uwzględnieniem aktualnych kursów
+                decimal sumaWPln = kontaDlaKlienta.Sum(k =>
+                    k.Kwota * (kursy.FirstOrDefault(kurs => kurs.Waluta == k.Waluta)?.KursS ?? 0
+                ));
+
+                // 4. Aktualizuj widok sumy (bez kontekstu synchronizacji)
+                label2.Text = $"Suma wartości walut w PLN: {sumaWPln.ToString("C2", CultureInfo.CurrentCulture)}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Błąd aktualizacji: {ex.Message}");
             }
         }
 
