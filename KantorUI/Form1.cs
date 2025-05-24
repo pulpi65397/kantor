@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
@@ -13,11 +13,16 @@ namespace KantorUI
     public partial class Form1 : Form
     {
         private char userType;
+        private Size defaultFormSize;
+        private Size defaultListViewSize;
 
-        public Form1(char userType)  // Poprawiony konstruktor
+
+        public Form1(char userType)
         {
             InitializeComponent();
             this.userType = userType;
+            defaultFormSize = this.Size;
+            defaultListViewSize = listView1.Size;
             LoadData();
             SetupUI();
         }
@@ -34,7 +39,7 @@ namespace KantorUI
 
                 if (kursy == null || kursy.Count == 0)
                 {
-                    MessageBox.Show("Brak danych do wyœwietlenia.");
+                    MessageBox.Show("Brak danych do wyï¿½wietlenia.");
                     return;
                 }
 
@@ -64,7 +69,7 @@ namespace KantorUI
                             }
                             catch (Exception ex)
                             {
-                                MessageBox.Show($"B³¹d podczas ³adowania obrazu: {ex.Message}");
+                                MessageBox.Show($"Bï¿½ï¿½d podczas ï¿½adowania obrazu: {ex.Message}");
                             }
                         }
                     }
@@ -74,7 +79,7 @@ namespace KantorUI
                     item.SubItems.Add(kurs.KursS.ToString("0.####", CultureInfo.InvariantCulture));
                     listView1.Items.Add(item);
 
-                    if (userType == 'A') // Tylko dla administratora
+                    if (userType == 'A')
                     {
                         AddEditButton(item, kurs);
                     }
@@ -82,29 +87,29 @@ namespace KantorUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"B³¹d podczas wczytywania danych: {ex.Message}");
+                MessageBox.Show($"Bï¿½ï¿½d podczas wczytywania danych: {ex.Message}");
             }
         }
 
         private void SetupUI()
         {
-            if (userType == 'U')  // U¿ytkownik niezalogowany
+            if (userType == 'U')
             {
-                // Poka¿ przyciski logowania i rejestracji
+
                 loginButton.Visible = true;
                 registerButton.Visible = true;
                 logoutButton.Visible = false;
             }
-            else if (userType == 'K')  // U¿ytkownik zalogowany bez uprawnieñ administratora
+            else if (userType == 'K')
             {
-                // Poka¿ tylko przycisk wylogowania
+
                 loginButton.Visible = false;
                 registerButton.Visible = false;
                 logoutButton.Visible = true;
             }
-            else if (userType == 'A')  // Administrator
+            else if (userType == 'A')
             {
-                // Poka¿ tylko przycisk wylogowania oraz rozszerzon¹ funkcjonalnoœæ
+
                 loginButton.Visible = false;
                 registerButton.Visible = false;
                 logoutButton.Visible = true;
@@ -131,14 +136,14 @@ namespace KantorUI
         {
             if (sender is Button editButton && editButton.Tag is Kurs kurs)
             {
-                // Otwieranie okna edycji kursów dla administratora
+
                 ShowEditForm(kurs);
             }
         }
 
         private void ShowEditForm(Kurs kurs)
         {
-            // Przyk³adowe okno edycji kursów
+
             Form editForm = new Form
             {
                 Text = $"Edycja kursu: {kurs.Waluta}",
@@ -169,11 +174,10 @@ namespace KantorUI
             {
                 try
                 {
-                    // Zmiana wartoœci kursów
+
                     kurs.KursK = decimal.Parse(buyCourseTextBox.Text, CultureInfo.InvariantCulture);
                     kurs.KursS = decimal.Parse(sellCourseTextBox.Text, CultureInfo.InvariantCulture);
 
-                    // Deserializacja istniej¹cej kolekcji kursów z pliku JSON
                     string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
                     string jsonFilePath = Path.Combine(projectDirectory, "KantorLibrary", "Data", "kursy.json");
                     string jsonContent = File.ReadAllText(jsonFilePath);
@@ -185,14 +189,12 @@ namespace KantorUI
                         kursDoAktualizacji.KursK = kurs.KursK;
                         kursDoAktualizacji.KursS = kurs.KursS;
 
-                        // Serializacja kolekcji z powrotem do pliku JSON
                         jsonContent = JsonSerializer.Serialize(kursy, new JsonSerializerOptions { WriteIndented = true });
                         File.WriteAllText(jsonFilePath, jsonContent);
 
                         MessageBox.Show($"Zaktualizowano kursy dla: {kurs.Waluta}");
 
-                        // Odœwie¿enie ListView w g³ównym oknie - Natychmiastowe odœwie¿enie
-                        UpdateKursyListView(kursy); // Odœwie¿enie ListView na g³ównym w¹tku
+                        UpdateKursyListView(kursy);
                     }
                     else
                     {
@@ -203,7 +205,7 @@ namespace KantorUI
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Wyst¹pi³ b³¹d: {ex.Message}");
+                    MessageBox.Show($"Wystï¿½piï¿½ bï¿½ï¿½d: {ex.Message}");
                 }
             };
 
@@ -240,12 +242,12 @@ namespace KantorUI
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show($"B³¹d podczas ³adowania obrazu: {ex.Message}");
+                            MessageBox.Show($"Bï¿½ï¿½d podczas ï¿½adowania obrazu: {ex.Message}");
                         }
                     }
                 }
 
-                listView1.Items.Add(item); // Dodawanie nowych elementów do ListView
+                listView1.Items.Add(item);
             }
         }
 
@@ -267,13 +269,17 @@ namespace KantorUI
         {
             if (Application.OpenForms["Form4"] != null)
             {
-                Application.OpenForms["Form4"].Close();  // Zamykamy Form4
+                Application.OpenForms["Form4"].Close();
             }
-            // Implementacja wylogowania i powrotu do trybu niezalogowanego
+
             MessageBox.Show("Wylogowano");
-            this.userType = 'U';  // Zmiana typu u¿ytkownika na niezalogowanego
-            SetupUI();  // Zaktualizowanie interfejsu
-            // Opcjonalnie: Odœwie¿ dane bez funkcji administracyjnych
+            this.userType = 'U';
+            SetupUI();
+            LoadData();
+            listView1.Controls.Clear();
+            listView1.Size = defaultListViewSize;
+            this.Size = defaultFormSize;
         }
+
     }
 }

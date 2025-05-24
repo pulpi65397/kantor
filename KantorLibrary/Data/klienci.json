@@ -598,5 +598,35 @@
     "Typ": "K",
     "Data": "2025-05-08T17:16:05.0405177+02:00",
     "Adresy": null
+  },
+  {
+    "Id": 10,
+    "Login": "test1",
+    "Haslo": "test1",
+    "Imie": "test1",
+    "Nazwisko": "test1",
+    "NazwaFirmy": "test1",
+    "NIP": "test1",
+    "Telefon": "test1",
+    "Email": "test1",
+    "Avatar": null,
+    "Typ": "K",
+    "Data": "2025-05-24T17:36:25.3234056+02:00",
+    "Adresy": null
+  },
+  {
+    "Id": 16,
+    "Login": "test1",
+    "Haslo": "test1",
+    "Imie": "test1",
+    "Nazwisko": "tset1",
+    "NazwaFirmy": "test1",
+    "NIP": "test1",
+    "Telefon": "test1",
+    "Email": "test1",
+    "Avatar": null,
+    "Typ": "K",
+    "Data": "2025-05-24T17:44:28.5949345+02:00",
+    "Adresy": null
   }
 ]

@@ -616,7 +616,8 @@ namespace KantorUI
                 }
 
                 await Task.Run(() => SaveToJson(filePathKonta, konta));
-
+                UpdateKontaListView(konta, KlientId);
+                LoadData();
                 WyswietlZamowienia();
             }
             catch (Exception ex)

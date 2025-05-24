@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KantorUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb134c48ffdee3d55a9bba156118e31cd2944327")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd1b81c12256da91a0a26cc25090cf221b278d9e")]
 [assembly: System.Reflection.AssemblyProductAttribute("KantorUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KantorUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
