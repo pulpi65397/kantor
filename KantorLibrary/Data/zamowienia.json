@@ -926,5 +926,37 @@
     "Strona": "S",
     "AdresId": 1,
     "Adres": null
+  },
+  {
+    "Id": 100,
+    "Data": "2025-05-24T17:48:50.6841963+02:00",
+    "KlientId": 10,
+    "Klient": null,
+    "Ilosc": 1,
+    "Wartosc": 4.2544,
+    "LokalizacjaId": 1,
+    "Lokalizacja": null,
+    "KursId": 1,
+    "Kurs": null,
+    "CenaKursu": 4.2544,
+    "Strona": "K",
+    "AdresId": 13,
+    "Adres": null
+  },
+  {
+    "Id": 101,
+    "Data": "2025-05-24T17:49:01.7902075+02:00",
+    "KlientId": 10,
+    "Klient": null,
+    "Ilosc": 1,
+    "Wartosc": 4.257,
+    "LokalizacjaId": 1,
+    "Lokalizacja": null,
+    "KursId": 1,
+    "Kurs": null,
+    "CenaKursu": 4.257,
+    "Strona": "S",
+    "AdresId": 13,
+    "Adres": null
   }
 ]

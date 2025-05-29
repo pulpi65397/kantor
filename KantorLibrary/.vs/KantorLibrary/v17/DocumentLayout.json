@@ -3,24 +3,52 @@
   "WorkspaceRootPath": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorlibrary\\data\\konta.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\konta.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form5.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorlibrary\\models\\lokalizacja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:models\\lokalizacja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorlibrary\\data\\kursy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\kursy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorlibrary\\data\\lokalizacje.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\lokalizacje.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorlibrary\\data\\zamowienia.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\zamowienia.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorlibrary\\data\\adresy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\adresy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorlibrary\\data\\konta.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\konta.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorlibrary\\data\\kursy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\kursy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7B7F27A-528B-42F7-8015-74BCEAD68294}|..\\KantorUI\\KantorUI.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorui\\form4.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -33,10 +61,6 @@
       "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\klienci.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorlibrary\\data\\adresy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:data\\adresy.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|e:\\kopia dokumenty\\studia\\semestr 6\\pz\\projekt\\kantorlibrary\\models\\zamowienie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DC69307-BEC7-45BA-BE17-07D08E23FE8C}|KantorLibrary.csproj|solutionrelative:models\\zamowienie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -47,8 +71,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "DockedWidth": 245,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -72,13 +96,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Form5.cs",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form5.cs",
+              "RelativeDocumentMoniker": "..\\KantorUI\\Form5.cs",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form5.cs",
+              "RelativeToolTip": "..\\KantorUI\\Form5.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAiwGoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T14:11:59.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "..\\KantorUI\\Form1.Designer.cs",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form1.Designer.cs",
+              "RelativeToolTip": "..\\KantorUI\\Form1.Designer.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAAAGkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T14:57:34.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\KantorUI\\Form1.cs",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form1.cs",
+              "RelativeToolTip": "..\\KantorUI\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T14:19:21.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Form2.cs",
               "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form2.cs",
               "RelativeDocumentMoniker": "..\\KantorUI\\Form2.cs",
               "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form2.cs",
               "RelativeToolTip": "..\\KantorUI\\Form2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAAAIkAAACAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-24T15:37:15.378Z",
               "EditorCaption": ""
@@ -86,38 +149,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "..\\KantorUI\\Form1.Designer.cs",
-              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form1.Designer.cs",
-              "RelativeToolTip": "..\\KantorUI\\Form1.Designer.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAAAGkAAAAvAAAAAAAAAA==",
+              "Title": "Lokalizacja.cs",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Models\\Lokalizacja.cs",
+              "RelativeDocumentMoniker": "Models\\Lokalizacja.cs",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Models\\Lokalizacja.cs",
+              "RelativeToolTip": "Models\\Lokalizacja.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T14:57:34.699Z"
+              "WhenOpened": "2025-05-27T15:27:10.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "zamowienia.json",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Data\\zamowienia.json",
+              "RelativeDocumentMoniker": "Data\\zamowienia.json",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Data\\zamowienia.json",
+              "RelativeToolTip": "Data\\zamowienia.json",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-28T15:59:24.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "lokalizacje.json",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Data\\lokalizacje.json",
+              "RelativeDocumentMoniker": "Data\\lokalizacje.json",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Data\\lokalizacje.json",
+              "RelativeToolTip": "Data\\lokalizacje.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAIDwAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-28T15:49:16.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form5.Designer.cs",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form5.Designer.cs",
+              "RelativeDocumentMoniker": "..\\KantorUI\\Form5.Designer.cs",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form5.Designer.cs",
+              "RelativeToolTip": "..\\KantorUI\\Form5.Designer.cs",
+              "ViewState": "AgIAACMCAAAAAAAAAAAiwEACAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T14:12:15.989Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form1.cs",
-              "RelativeDocumentMoniker": "..\\KantorUI\\Form1.cs",
-              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form1.cs",
-              "RelativeToolTip": "..\\KantorUI\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Title": "Form4.cs",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form4.cs",
+              "RelativeDocumentMoniker": "..\\KantorUI\\Form4.cs",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form4.cs",
+              "RelativeToolTip": "..\\KantorUI\\Form4.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAiwGQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T14:19:21.671Z"
+              "WhenOpened": "2025-05-29T15:41:45.722Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "kursy.json",
-              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Data\\kursy.json",
-              "RelativeDocumentMoniker": "Data\\kursy.json",
-              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Data\\kursy.json",
-              "RelativeToolTip": "Data\\kursy.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-24T14:07:37.399Z"
+              "DocumentIndex": 5,
+              "Title": "Form5.cs [Projekt]",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form5.cs",
+              "RelativeDocumentMoniker": "..\\KantorUI\\Form5.cs",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form5.cs [Projekt]",
+              "RelativeToolTip": "..\\KantorUI\\Form5.cs [Projekt]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T14:10:17.055Z",
+              "EditorCaption": " [Projekt]"
             },
             {
               "$type": "Document",
@@ -133,7 +237,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
+              "Title": "kursy.json",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Data\\kursy.json",
+              "RelativeDocumentMoniker": "Data\\kursy.json",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Data\\kursy.json",
+              "RelativeToolTip": "Data\\kursy.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-24T14:07:37.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "klienci.json",
               "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Data\\klienci.json",
               "RelativeDocumentMoniker": "Data\\klienci.json",
@@ -145,31 +261,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
               "Title": "konta.json",
               "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Data\\konta.json",
               "RelativeDocumentMoniker": "Data\\konta.json",
               "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Data\\konta.json",
               "RelativeToolTip": "Data\\konta.json",
-              "ViewState": "AgIAAKoCAAAAAAAAAAAAALgCAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-24T14:06:52.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T14:06:52.817Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
+              "Title": "Form1.cs [Projekt]",
+              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\KantorUI\\Form1.cs",
+              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form1.cs [Projekt]",
+              "RelativeToolTip": "..\\KantorUI\\Form1.cs [Projekt]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T14:55:12.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Form4.cs [Projekt]",
               "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form4.cs",
               "RelativeDocumentMoniker": "..\\KantorUI\\Form4.cs",
               "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form4.cs [Projekt]",
               "RelativeToolTip": "..\\KantorUI\\Form4.cs [Projekt]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T17:23:25.729Z"
+              "WhenOpened": "2025-05-20T17:23:25.729Z",
+              "EditorCaption": " [Projekt]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "Zamowienie.cs",
               "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorLibrary\\Models\\Zamowienie.cs",
               "RelativeDocumentMoniker": "Models\\Zamowienie.cs",
@@ -181,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "Form4.Designer.cs",
               "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form4.Designer.cs",
               "RelativeDocumentMoniker": "..\\KantorUI\\Form4.Designer.cs",
@@ -189,19 +316,8 @@
               "RelativeToolTip": "..\\KantorUI\\Form4.Designer.cs",
               "ViewState": "AgIAAEYBAAAAAAAAAADgv0wBAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T15:48:20.031Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form4.cs",
-              "DocumentMoniker": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form4.cs",
-              "RelativeDocumentMoniker": "..\\KantorUI\\Form4.cs",
-              "ToolTip": "E:\\kopia dokumenty\\STUDIA\\Semestr 6\\PZ\\Projekt\\KantorUI\\Form4.cs",
-              "RelativeToolTip": "..\\KantorUI\\Form4.cs",
-              "ViewState": "AgIAAGACAAAAAAAAAAAAAK4BAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T15:54:05.189Z"
+              "WhenOpened": "2025-05-20T15:48:20.031Z",
+              "EditorCaption": ""
             }
           ]
         }

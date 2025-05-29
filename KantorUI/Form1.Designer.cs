@@ -35,6 +35,7 @@ namespace KantorUI
             registerButton = new Button();
             loginButton = new Button();
             logoutButton = new Button();
+            lokalizacjeButton = new Button();
             imageList = new ImageList();
 
             // Dodanie kolumn do listView1
@@ -100,11 +101,23 @@ namespace KantorUI
             logoutButton.Click += new EventHandler(this.logoutButton_Click);  // Przypisanie zdarzenia kliknięcia
 
             // 
+            // lokalizacjeButton
+            // 
+            lokalizacjeButton.Location = new Point(400, 96);
+            lokalizacjeButton.Name = "lokalizacjeButton";
+            lokalizacjeButton.Size = new Size(100, 23);
+            lokalizacjeButton.TabIndex = 4;
+            lokalizacjeButton.Text = "Lokalizacje";
+            lokalizacjeButton.UseVisualStyleBackColor = true;
+            lokalizacjeButton.Click += new EventHandler(this.lokalizacjeButton_Click);  // Przypisanie zdarzenia kliknięcia
+
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(405, 325);
+            Controls.Add(lokalizacjeButton);
             Controls.Add(loginButton);
             Controls.Add(registerButton);
             Controls.Add(logoutButton);
@@ -124,6 +137,7 @@ namespace KantorUI
         private Button registerButton;
         private Button loginButton;
         private Button logoutButton;
+        private Button lokalizacjeButton;
         private ImageList imageList;
     }
 }
