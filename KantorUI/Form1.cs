@@ -100,6 +100,7 @@ namespace KantorUI
                 registerButton.Visible = true;
                 logoutButton.Visible = false;
                 lokalizacjeButton.Visible = false;
+                raportyButton.Visible = false;
             }
             else if (userType == 'K')
             {
@@ -108,6 +109,7 @@ namespace KantorUI
                 registerButton.Visible = false;
                 logoutButton.Visible = true;
                 lokalizacjeButton.Visible = false;
+                raportyButton.Visible = false;
             }
             else if (userType == 'A')
             {
@@ -116,6 +118,7 @@ namespace KantorUI
                 registerButton.Visible = false;
                 logoutButton.Visible = true;
                 lokalizacjeButton.Visible = true;
+                raportyButton.Visible = true;
                 listView1.Size = new Size(375, 250);
                 this.Size = new Size(525, 350);
                 logoutButton.Location = new Point(400, 67);
@@ -272,6 +275,12 @@ namespace KantorUI
         {
             Form5 form5 = new Form5();
             form5.Show();
+        }
+
+        private void raportyButton_Click(object sender, EventArgs e)
+        {
+            Form6 form6 = new Form6();
+            form6.Show();
         }
 
         private void logoutButton_Click(object sender, EventArgs e)

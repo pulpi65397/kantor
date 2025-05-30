@@ -24,3 +24,4 @@ E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorUI\obj\Debug\net9.0-windows
 E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorUI\obj\Debug\net9.0-windows\KantorUI.genruntimeconfig.cache
 E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorUI\obj\Debug\net9.0-windows\ref\KantorUI.dll
 E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorUI\obj\Debug\net9.0-windows\KantorUI.Form5.resources
+E:\kopia dokumenty\STUDIA\Semestr 6\PZ\Projekt\KantorUI\obj\Debug\net9.0-windows\KantorUI.Form6.resources
